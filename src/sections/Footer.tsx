@@ -10,7 +10,7 @@ export default function Footer() {
             <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-400 text-slate-900">
               <KeyRound className="h-5 w-5" strokeWidth={2.5} />
             </span>
-            <span className="font-display text-lg font-bold text-white">Keys on Wheels</span>
+            <span className="font-display text-lg font-bold text-white">Amigo Locksmith</span>
           </a>
           <p className="mt-5 text-sm leading-relaxed text-slate-400">
             {SITE.name} — 24/7 mobile automotive, residential and commercial locksmith based in{" "}

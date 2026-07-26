@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Clock, MapPin, Phone, ShieldCheck, Star, Zap } from "lucide-react";
+import ExpandableText from "@/components/ExpandableText";
 import { SITE } from "@/lib/site";
 
 const badges = [
@@ -15,7 +16,7 @@ export default function Hero() {
       <div className="absolute inset-0">
         <img
           src="/images/hero-locksmith.jpg"
-          alt="Keys on Wheels mobile locksmith technician opening a car door at dusk in Grand Prairie, TX"
+          alt="Amigo Locksmith mobile locksmith technician opening a car door at dusk in Grand Prairie, TX"
           className="h-full w-full object-cover"
           fetchPriority="high"
         />
@@ -44,11 +45,7 @@ export default function Hero() {
             We're Already on Our Way.
           </h1>
 
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300 sm:text-xl">
-            Keys on Wheels is DFW's 24/7 mobile locksmith — car lockouts, key fob programming,
-            home rekeys and commercial security, done on the spot wherever you are. Serving
-            Grand Prairie, Arlington, Irving, Dallas, Fort Worth and the entire metroplex.
-          </p>
+          <ExpandableText text="Amigo Locksmith is DFW's 24/7 mobile locksmith — car lockouts, key fob programming, home rekeys and commercial security, done on the spot wherever you are. Serving Grand Prairie, Arlington, Irving, Dallas, Fort Worth and the entire metroplex." />
 
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
             <a

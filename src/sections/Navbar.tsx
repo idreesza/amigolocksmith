@@ -25,7 +25,7 @@ export default function Navbar() {
             <KeyRound className="h-5 w-5" strokeWidth={2.5} />
           </span>
           <span className="leading-tight">
-            <span className="block font-display text-lg font-bold text-white">Keys on Wheels</span>
+            <span className="block font-display text-lg font-bold text-white">Amigo Locksmith</span>
             <span className="block text-[11px] font-medium uppercase tracking-widest text-amber-400">
               24/7 Mobile Locksmith
             </span>

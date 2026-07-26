@@ -42,7 +42,7 @@ export default function Services() {
                 <div className="relative h-56 overflow-hidden">
                   <img
                     src={svc.image}
-                    alt={`${svc.title} in Grand Prairie and DFW — Keys on Wheels`}
+                    alt={`${svc.title} in Grand Prairie and DFW — Amigo Locksmith`}
                     loading="lazy"
                     className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                   />

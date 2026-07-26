@@ -2,18 +2,18 @@
 // Every section, the JSON-LD schema, llms.txt and sitemap derive from this.
 
 export const SITE = {
-  name: "Keys on Wheels",
+  name: "Amigo Locksmith",
   tagline: "The Locksmith That Comes to You — 24/7 Across DFW",
-  phone: "(469) 871-5625",
-  phoneHref: "tel:+14698715625",
-  phoneIntl: "+1-469-871-5625",
-  email: "info@keysonwheels.com",
-  emailHref: "mailto:info@keysonwheels.com",
+  phone: "(682) 666-2966",
+  phoneHref: "tel:+16826662966",
+  phoneIntl: "+1-682-666-2966",
+  email: "info@amigolocksmith.com",
+  emailHref: "mailto:info@amigolocksmith.com",
   city: "Grand Prairie",
   state: "TX",
   stateFull: "Texas",
   region: "Dallas–Fort Worth Metroplex",
-  url: "https://keysonwheels.com",
+  url: "https://www.amigolocksmith.com",
   hours: "24/7 — including weekends and holidays",
   geo: { lat: 32.7459, lng: -96.9978 }, // Grand Prairie, TX
 };
@@ -97,19 +97,19 @@ export const EMERGENCY_SERVICES = [
   "Key fob not working",
 ];
 
-export const PRICING = [
-  { service: "Car lockout (damage-free entry)", range: "$65 – $125" },
-  { service: "House lockout", range: "$75 – $135" },
-  { service: "Business lockout", range: "$85 – $150" },
-  { service: "Lock rekey (per cylinder)", range: "$25 – $45" },
-  { service: "Standard lock replacement", range: "$85 – $185" },
-  { service: "Smart lock installation", range: "$120 – $275" },
-  { service: "Car key duplicate (basic)", range: "$75 – $125" },
-  { service: "Transponder key cut & programmed", range: "$145 – $285" },
-  { service: "Smart key / proximity fob", range: "$185 – $395" },
-  { service: "Ignition repair / replacement", range: "$185 – $450" },
-  { service: "Master key system setup", range: "Quote on site" },
-  { service: "Panic bar / exit device install", range: "$225 – $475" },
+export const PRICING: { service: string; start?: number; quote?: boolean }[] = [
+  { service: "Car lockout (damage-free entry)", start: 65 },
+  { service: "House lockout", start: 75 },
+  { service: "Business lockout", start: 85 },
+  { service: "Lock rekey (per cylinder)", start: 25 },
+  { service: "Standard lock replacement", start: 85 },
+  { service: "Smart lock installation", start: 120 },
+  { service: "Car key duplicate (basic)", start: 75 },
+  { service: "Transponder key cut & programmed", start: 145 },
+  { service: "Smart key / proximity fob", start: 185 },
+  { service: "Ignition repair / replacement", start: 185 },
+  { service: "Master key system setup", quote: true },
+  { service: "Panic bar / exit device install", start: 225 },
 ];
 
 export const REVIEWS = [
@@ -124,7 +124,7 @@ export const REVIEWS = [
     name: "Derek T.",
     city: "Arlington, TX",
     service: "Key fob programming",
-    text: "The dealer quoted me $480 and a two-day wait for a new fob. Keys on Wheels came to my office, cut and programmed it in the parking lot for nearly half the price. Unreal service.",
+    text: "The dealer quoted me $480 and a two-day wait for a new fob. Amigo Locksmith came to my office, cut and programmed it in the parking lot for nearly half the price. Unreal service.",
     rating: 5,
   },
   {
@@ -160,11 +160,11 @@ export const REVIEWS = [
 export const FAQS = [
   {
     q: "How fast can a locksmith get to me in Grand Prairie or DFW?",
-    a: "Because Keys on Wheels is a fully mobile locksmith based in Grand Prairie, our average arrival time is 15–25 minutes within Grand Prairie and 20–45 minutes across the rest of the Dallas–Fort Worth metroplex, including Arlington, Irving, Dallas, Fort Worth, Mansfield, Duncanville, Cedar Hill, Plano and Frisco. When you call (469) 871-5625, we give you a real-time ETA before you hang up.",
+    a: "Because Amigo Locksmith is a fully mobile locksmith based in Grand Prairie, our average arrival time is 15–25 minutes within Grand Prairie and 20–45 minutes across the rest of the Dallas–Fort Worth metroplex, including Arlington, Irving, Dallas, Fort Worth, Mansfield, Duncanville, Cedar Hill, Plano and Frisco. When you call (682) 666-2966, we give you a real-time ETA before you hang up.",
   },
   {
     q: "How much does a locksmith cost in Grand Prairie, TX?",
-    a: "Most car lockouts in Grand Prairie cost $65–$125, house lockouts $75–$135, and lock rekeys $25–$45 per cylinder. Transponder key cutting and programming typically runs $145–$285 — often 40–60% less than a dealership. We always quote the full price before any work begins, so you never pay a surprise fee.",
+    a: "Most car lockouts in Grand Prairie start at $65, house lockouts start at $75, and lock rekeys start at $25 per cylinder. Transponder key cutting and programming starts at $145 — often 40–60% less than a dealership. We always quote the full price before any work begins, so you never pay a surprise fee.",
   },
   {
     q: "Can you make a car key if I lost all my keys?",
@@ -172,7 +172,7 @@ export const FAQS = [
   },
   {
     q: "Are you available 24 hours a day, even on weekends and holidays?",
-    a: "Yes — Keys on Wheels operates 24/7/365, including nights, weekends and holidays. Lockouts don't keep business hours, and neither do we. Emergency calls are answered by a real dispatcher, not a voicemail.",
+    a: "Yes — Amigo Locksmith operates 24/7/365, including nights, weekends and holidays. Lockouts don't keep business hours, and neither do we. Emergency calls are answered by a real dispatcher, not a voicemail.",
   },
   {
     q: "Will opening my car or house damage the lock?",
@@ -180,7 +180,7 @@ export const FAQS = [
   },
   {
     q: "What should I do right now if I'm locked out?",
-    a: "Stay calm and safe, don't force the lock or try coat-hanger tricks (they cause expensive damage), and call (469) 871-5625. Tell us your location, vehicle or door type, and whether there are children or pets inside — those calls are prioritized above everything else.",
+    a: "Stay calm and safe, don't force the lock or try coat-hanger tricks (they cause expensive damage), and call (682) 666-2966. Tell us your location, vehicle or door type, and whether there are children or pets inside — those calls are prioritized above everything else.",
   },
   {
     q: "Do you rekey locks after buying a new home or after a tenant moves out?",
@@ -192,7 +192,7 @@ export const FAQS = [
   },
   {
     q: "Are your locksmiths licensed and insured?",
-    a: "Yes. Keys on Wheels technicians are licensed under the Texas Department of Public Safety Private Security Bureau, background-checked, uniformed, and fully insured. Ask for the license number any time — we're proud to show it.",
+    a: "Yes. Amigo Locksmith technicians are licensed under the Texas Department of Public Safety Private Security Bureau, background-checked, uniformed, and fully insured. Ask for the license number any time — we're proud to show it.",
   },
   {
     q: "Do you charge extra for nights, weekends or emergencies?",

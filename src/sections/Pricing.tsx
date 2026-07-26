@@ -14,7 +14,7 @@ export default function Pricing() {
               Know the Price <span className="text-gradient-amber">Before We Start</span>
             </>
           }
-          sub="Real ranges, published openly — because a locksmith who hides pricing is telling you something. Your exact quote is confirmed before any work begins, and it never changes after."
+          sub="Real starting prices, published openly — because a locksmith who hides pricing is telling you something. Your exact quote is confirmed before any work begins, and it never changes after."
         />
 
         <Reveal className="mt-14">
@@ -23,7 +23,7 @@ export default function Pricing() {
               <thead>
                 <tr className="border-b border-slate-700 bg-slate-800/60 text-xs uppercase tracking-wider text-slate-400">
                   <th className="px-6 py-4 font-semibold">Service</th>
-                  <th className="px-6 py-4 text-right font-semibold">Typical Range</th>
+                  <th className="px-6 py-4 text-right font-semibold">Price</th>
                 </tr>
               </thead>
               <tbody>
@@ -35,7 +35,9 @@ export default function Pricing() {
                     }`}
                   >
                     <td className="px-6 py-3.5 font-medium text-slate-200">{row.service}</td>
-                    <td className="px-6 py-3.5 text-right font-bold text-amber-300">{row.range}</td>
+                    <td className="px-6 py-3.5 text-right font-bold text-amber-300">
+                      {row.quote ? "Quote on site" : `Starting at $${row.start}`}
+                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -48,8 +50,8 @@ export default function Pricing() {
             <Info className="h-5 w-5 shrink-0 text-amber-400" />
             <p className="text-sm leading-relaxed text-slate-400">
               Final price depends on lock type, vehicle make/model and time of day — but it's always
-              confirmed up-front. After-hours emergency dispatch may carry a modest fee, quoted
-              before we roll. We accept cash, all major cards, Apple Pay and Google Pay.
+              confirmed up-front before we start. After-hours emergency dispatch may carry a modest
+              fee, quoted before we roll. We accept cash, all major cards, Apple Pay and Google Pay.
             </p>
           </div>
         </Reveal>

@@ -11,7 +11,7 @@ export default function Contact() {
     e.preventDefault();
     const subject = encodeURIComponent(`Locksmith request — ${form.city || "DFW"} — ${form.name}`);
     const body = encodeURIComponent(
-      `Name: ${form.name}\nPhone: ${form.phone}\nCity: ${form.city}\n\nMessage:\n${form.message}\n\n— Sent from keysonwheels.com`
+      `Name: ${form.name}\nPhone: ${form.phone}\nCity: ${form.city}\n\nMessage:\n${form.message}\n\n— Sent from amigolocksmith.com`
     );
     window.location.href = `${SITE.emailHref}?subject=${subject}&body=${body}`;
     setSent(true);
