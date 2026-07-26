@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://keysonwheels.com/sitemap.xml
