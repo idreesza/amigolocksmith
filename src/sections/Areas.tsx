@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { MapPin, Phone } from "lucide-react";
 import Reveal, { SectionHeading } from "@/components/Reveal";
 import { CITIES, SITE } from "@/lib/site";
@@ -13,13 +14,13 @@ export default function Areas() {
               Everywhere in <span className="text-gradient-amber">DFW</span>, Fast
             </>
           }
-          sub="Headquartered in Grand Prairie with mobile units staged across the metroplex. If you're anywhere in the Dallas–Fort Worth area, one call brings a full locksmith shop to your curb."
+          sub="Headquartered in Grand Prairie with mobile units staged across the metroplex. Tap your city for its dedicated page — local arrival times, neighborhoods we serve, pricing and FAQs."
         />
-        <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+        <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {CITIES.map((c, i) => (
-            <Reveal key={c.name} delay={(i % 5) * 0.07}>
-              <a
-                href={SITE.phoneHref}
+            <Reveal key={c.slug} delay={(i % 4) * 0.06}>
+              <Link
+                to={`/locksmith/${c.slug}`}
                 className="group flex h-full flex-col rounded-2xl border border-slate-700/60 bg-slate-900/50 p-5 transition hover:-translate-y-1 hover:border-amber-400/50 hover:shadow-xl hover:shadow-amber-500/10"
               >
                 <div className="flex items-center justify-between">
@@ -31,11 +32,11 @@ export default function Areas() {
                 <h3 className="mt-4 text-lg font-bold text-white transition group-hover:text-amber-300">
                   {c.name}
                 </h3>
-                <p className="mt-1.5 text-xs leading-relaxed text-slate-400">{c.blurb}</p>
-                <span className="mt-3 text-xs font-semibold text-slate-500">
+                <p className="mt-1.5 flex-1 text-xs leading-relaxed text-slate-400">{c.blurb}</p>
+                <span className="mt-3 text-xs font-semibold text-amber-300/80 transition group-hover:text-amber-300">
                   Locksmith in {c.name}, TX →
                 </span>
-              </a>
+              </Link>
             </Reveal>
           ))}
         </div>

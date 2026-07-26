@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { KeyRound, Mail, Phone } from "lucide-react";
 import { CITIES, NAV_LINKS, SERVICES, SITE } from "@/lib/site";
 
@@ -6,12 +7,12 @@ export default function Footer() {
     <footer className="border-t border-slate-800 bg-[#070F1E]">
       <div className="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-4 lg:px-8">
         <div>
-          <a href="#top" className="flex items-center gap-2.5">
+          <Link to="/" className="flex items-center gap-2.5">
             <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-400 text-slate-900">
               <KeyRound className="h-5 w-5" strokeWidth={2.5} />
             </span>
             <span className="font-display text-lg font-bold text-white">Amigo Locksmith</span>
-          </a>
+          </Link>
           <p className="mt-5 text-sm leading-relaxed text-slate-400">
             {SITE.name} — 24/7 mobile automotive, residential and commercial locksmith based in{" "}
             {SITE.city}, {SITE.state}, serving the entire {SITE.region}.
@@ -31,51 +32,50 @@ export default function Footer() {
           <ul className="mt-5 grid gap-2.5 text-sm text-slate-400">
             {SERVICES.map((s) => (
               <li key={s.title}>
-                <a href="#services" className="transition hover:text-amber-300">
+                <Link to="/#services" className="transition hover:text-amber-300">
                   {s.title}
-                </a>
+                </Link>
               </li>
             ))}
             <li>
-              <a href="#services" className="transition hover:text-amber-300">
+              <Link to="/#services" className="transition hover:text-amber-300">
                 24/7 Emergency Lockouts
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#pricing" className="transition hover:text-amber-300">
+              <Link to="/#pricing" className="transition hover:text-amber-300">
                 Pricing
-              </a>
+              </Link>
             </li>
           </ul>
-        </div>
-
-        <div>
-          <h3 className="text-sm font-bold uppercase tracking-wider text-white">Service Areas</h3>
-          <ul className="mt-5 grid grid-cols-2 gap-2.5 text-sm text-slate-400 lg:grid-cols-1">
-            {CITIES.map((c) => (
-              <li key={c.name}>
-                <a href="#areas" className="transition hover:text-amber-300">
-                  Locksmith {c.name}, TX
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div>
-          <h3 className="text-sm font-bold uppercase tracking-wider text-white">Company</h3>
+          <h3 className="mt-8 text-sm font-bold uppercase tracking-wider text-white">Company</h3>
           <ul className="mt-5 grid gap-2.5 text-sm text-slate-400">
             {NAV_LINKS.map((l) => (
               <li key={l.href}>
-                <a href={l.href} className="transition hover:text-amber-300">
+                <Link to={`/${l.href}`} className="transition hover:text-amber-300">
                   {l.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
-          <div className="mt-6 rounded-2xl border border-slate-800 bg-slate-900/50 p-4 text-xs leading-relaxed text-slate-500">
+        </div>
+
+        <div className="lg:col-span-2">
+          <h3 className="text-sm font-bold uppercase tracking-wider text-white">
+            Service Areas — 27 DFW Cities
+          </h3>
+          <ul className="mt-5 grid grid-cols-2 gap-x-6 gap-y-2.5 text-sm text-slate-400 sm:grid-cols-3">
+            {CITIES.map((c) => (
+              <li key={c.slug}>
+                <Link to={`/locksmith/${c.slug}`} className="transition hover:text-amber-300">
+                  Locksmith {c.name}, TX
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <div className="mt-8 rounded-2xl border border-slate-800 bg-slate-900/50 p-4 text-xs leading-relaxed text-slate-500">
             Licensed by the Texas Department of Public Safety — Private Security Bureau.
-            Bonded & insured.
+            Bonded & insured. Open 24/7 including weekends and holidays.
           </div>
         </div>
       </div>
@@ -87,7 +87,7 @@ export default function Footer() {
           </span>
           <span>
             24/7 Locksmith Grand Prairie TX · Serving Arlington, Irving, Dallas, Fort Worth,
-            Mansfield, Duncanville, Cedar Hill, Plano & Frisco
+            Mansfield, Duncanville, Cedar Hill, Plano, Frisco & all DFW
           </span>
         </div>
       </div>

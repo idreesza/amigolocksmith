@@ -1,10 +1,14 @@
 import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router";
 import { Menu, Phone, X, KeyRound } from "lucide-react";
 import { NAV_LINKS, SITE } from "@/lib/site";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const { pathname } = useLocation();
+  const onHome = pathname === "/";
+  const navTo = (href: string) => (onHome ? href : `/${href}`);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -20,7 +24,7 @@ export default function Navbar() {
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
-        <a href="#top" className="flex items-center gap-2.5">
+        <Link to="/" className="flex items-center gap-2.5">
           <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-400 text-slate-900 shadow-lg shadow-amber-500/30">
             <KeyRound className="h-5 w-5" strokeWidth={2.5} />
           </span>
@@ -30,17 +34,17 @@ export default function Navbar() {
               24/7 Mobile Locksmith
             </span>
           </span>
-        </a>
+        </Link>
 
         <div className="hidden items-center gap-7 lg:flex">
           {NAV_LINKS.map((l) => (
-            <a
+            <Link
               key={l.href}
-              href={l.href}
+              to={navTo(l.href)}
               className="text-sm font-medium text-slate-300 transition hover:text-amber-400"
             >
               {l.label}
-            </a>
+            </Link>
           ))}
         </div>
 
@@ -69,14 +73,14 @@ export default function Navbar() {
         <div className="glass-panel border-t border-slate-700/50 lg:hidden">
           <div className="mx-auto grid max-w-7xl gap-1 px-4 py-4">
             {NAV_LINKS.map((l) => (
-              <a
+              <Link
                 key={l.href}
-                href={l.href}
+                to={navTo(l.href)}
                 onClick={() => setOpen(false)}
                 className="rounded-lg px-3 py-2.5 text-sm font-medium text-slate-200 transition hover:bg-slate-800 hover:text-amber-400"
               >
                 {l.label}
-              </a>
+              </Link>
             ))}
           </div>
         </div>

@@ -1,6 +1,8 @@
 // Central source of truth for NAP (Name, Address, Phone) and content.
 // Every section, the JSON-LD schema, llms.txt and sitemap derive from this.
 
+import { CITY_PAGES } from "@/data/cities";
+
 export const SITE = {
   name: "Amigo Locksmith",
   tagline: "The Locksmith That Comes to You — 24/7 Across DFW",
@@ -18,18 +20,7 @@ export const SITE = {
   geo: { lat: 32.7459, lng: -96.9978 }, // Grand Prairie, TX
 };
 
-export const CITIES = [
-  { name: "Grand Prairie", eta: "15–25 min", blurb: "Our home base — the fastest response in the metroplex." },
-  { name: "Arlington", eta: "20–30 min", blurb: "From AT&T Stadium to Lake Arlington, we cover every neighborhood." },
-  { name: "Irving", eta: "20–30 min", blurb: "Las Colinas, Valley Ranch and all Irving business districts." },
-  { name: "Dallas", eta: "25–40 min", blurb: "Downtown, Uptown, Oak Cliff, Lake Highlands and beyond." },
-  { name: "Fort Worth", eta: "30–45 min", blurb: "Sundance Square to Alliance — full coverage west of Grand Prairie." },
-  { name: "Mansfield", eta: "25–35 min", blurb: "New developments and established neighborhoods alike." },
-  { name: "Duncanville", eta: "20–30 min", blurb: "Best Southwest corridor coverage, day and night." },
-  { name: "Cedar Hill", eta: "25–35 min", blurb: "From Joe Pool Lake to the Hill Country retail corridor." },
-  { name: "Plano", eta: "35–50 min", blurb: "Corporate campuses, retail and residential across Plano." },
-  { name: "Frisco", eta: "40–55 min", blurb: "Fast-growing Frisco — we're already on the road there daily." },
-];
+export const CITIES = CITY_PAGES.map(({ slug, name, eta, blurb }) => ({ slug, name, eta, blurb }));
 
 export type Service = {
   title: string;
