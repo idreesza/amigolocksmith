@@ -9,7 +9,7 @@ import { getCity } from "@/data/cities";
 import { PRICING, SERVICES, SITE } from "@/lib/site";
 
 /** Sets per-city document title, meta description, canonical and JSON-LD. */
-function CitySeo({ slug, name, eta }: { slug: string; name: string; eta: string }) {
+function CitySeo({ slug, name, eta, localQ }: { slug: string; name: string; eta: string; localQ: { q: string; a: string } }) {
   useEffect(() => {
     const title = `24/7 Locksmith ${name} TX | Amigo Locksmith — Mobile Locksmith | (682) 666-2966`;
     const desc = `Locked out in ${name}, TX? Amigo Locksmith's 24/7 mobile locksmith serves ${name} with ${eta} average arrival. Car lockouts starting at $65, key fob programming, home rekeys & commercial security. Call (682) 666-2966.`;
@@ -57,6 +57,7 @@ function CitySeo({ slug, name, eta }: { slug: string; name: string; eta: string 
             addressRegion: "TX",
             addressCountry: "US",
           },
+          geo: { "@type": "GeoCoordinates", latitude: SITE.geo.lat, longitude: SITE.geo.lng },
           openingHoursSpecification: {
             "@type": "OpeningHoursSpecification",
             dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
@@ -72,6 +73,32 @@ function CitySeo({ slug, name, eta }: { slug: string; name: string; eta: string 
             { "@type": "ListItem", position: 3, name: `Locksmith ${name}, TX`, item: `${SITE.url}/locksmith/${slug}` },
           ],
         },
+        {
+          "@type": "FAQPage",
+          mainEntity: [
+            {
+              "@type": "Question",
+              name: `How fast can a locksmith get to me in ${name}?`,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: `Amigo Locksmith averages ${eta} arrival anywhere in ${name}, 24 hours a day — including nights, weekends and holidays. Because our mobile units stage across the metroplex, you always get a real ETA when you call ${SITE.phone}.`,
+              },
+            },
+            {
+              "@type": "Question",
+              name: localQ.q,
+              acceptedAnswer: { "@type": "Answer", text: localQ.a },
+            },
+            {
+              "@type": "Question",
+              name: `How much does a locksmith cost in ${name}?`,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: `In ${name}, car lockouts start at $65, house lockouts start at $75, business lockouts start at $85, and lock rekeys start at $25 per cylinder. We quote the complete price before any work begins — the quoted price is the final price.`,
+              },
+            },
+          ],
+        },
       ],
     };
     const el = document.createElement("script");
@@ -81,10 +108,19 @@ function CitySeo({ slug, name, eta }: { slug: string; name: string; eta: string 
     document.head.appendChild(el);
     return () => {
       document.getElementById("city-schema")?.remove();
+      // Restore homepage head tags so back-navigation shows correct values
+      document.title = HOME_TITLE;
+      const md = document.head.querySelector<HTMLMetaElement>('meta[name="description"]');
+      if (md) md.content = HOME_DESC;
+      const can = document.head.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+      if (can) can.href = `${SITE.url}/`;
     };
-  }, [slug, name, eta]);
+  }, [slug, name, eta, localQ]);
   return null;
 }
+
+const HOME_TITLE = "24/7 Locksmith Grand Prairie TX | Amigo Locksmith — Mobile Locksmith DFW | (682) 666-2966";
+const HOME_DESC = "Amigo Locksmith is a 24/7 mobile locksmith in Grand Prairie, TX serving the entire Dallas–Fort Worth metroplex. Car lockouts starting at $65, key fob programming, home rekeys & commercial security. Average 15–25 min arrival. Call (682) 666-2966.";
 
 export default function CityPage() {
   const { slug = "" } = useParams();
@@ -112,7 +148,7 @@ export default function CityPage() {
 
   return (
     <div className="min-h-screen bg-[#0A1628] text-slate-200 antialiased">
-      <CitySeo slug={city.slug} name={city.name} eta={city.eta} />
+      <CitySeo slug={city.slug} name={city.name} eta={city.eta} localQ={city.localQ} />
       <Navbar />
 
       <main>

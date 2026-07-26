@@ -37,10 +37,10 @@ export default function About() {
 
           <div>
             <Reveal>
-              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-amber-400">
-                About us
-              </p>
-              <h2 className="mt-3 text-3xl font-bold text-white sm:text-4xl lg:leading-tight">
+              <h2 className="text-3xl font-bold text-white sm:text-4xl lg:leading-tight">
+                <span className="block text-sm font-semibold uppercase tracking-[0.25em] text-amber-400">
+                  About us
+                </span>
                 A Grand Prairie Company That Treats Your Emergency Like{" "}
                 <span className="text-gradient-amber">Our Own</span>
               </h2>

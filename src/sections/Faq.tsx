@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -8,34 +7,9 @@ import {
 import Reveal, { SectionHeading } from "@/components/Reveal";
 import { FAQS, SITE } from "@/lib/site";
 
-/** Injects FAQPage structured data (from the same FAQS source) for SEO/AIO. */
-function FaqSchema() {
-  useEffect(() => {
-    const schema = {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: FAQS.map((f) => ({
-        "@type": "Question",
-        name: f.q,
-        acceptedAnswer: { "@type": "Answer", text: f.a },
-      })),
-    };
-    const el = document.createElement("script");
-    el.type = "application/ld+json";
-    el.id = "faq-schema";
-    el.textContent = JSON.stringify(schema);
-    document.head.appendChild(el);
-    return () => {
-      document.getElementById("faq-schema")?.remove();
-    };
-  }, []);
-  return null;
-}
-
 export default function Faq() {
   return (
     <section id="faq" className="relative bg-[#0A1628] py-24">
-      <FaqSchema />
       <div className="absolute inset-0 bg-grid-navy opacity-40" aria-hidden />
       <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
