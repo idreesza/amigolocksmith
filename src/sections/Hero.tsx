@@ -16,8 +16,8 @@ export default function Hero() {
       <div className="absolute inset-0">
         <img
           src="/images/hero-locksmith.jpg"
-          alt="Amigo Locksmith mobile locksmith technician opening a car door at dusk in Grand Prairie, TX"
-          className="h-full w-full object-cover"
+          alt="Amigo Locksmith branded mobile service van with a technician cutting keys on-site at dusk in Grand Prairie, TX"
+          className="h-full w-full object-cover object-right"
           fetchPriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628] via-[#0A1628]/72 to-[#0A1628]/35" />
