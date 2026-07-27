@@ -32,6 +32,22 @@ def wait_port(port, timeout=10):
         time.sleep(0.2)
     return False
 
+def find_chromium():
+    """Locate a Chromium binary: env override, common paths, or Playwright's own."""
+    env = os.environ.get("CHROMIUM_PATH")
+    if env and os.path.exists(env):
+        return env
+    import shutil
+    for name in ("chromium", "chromium-browser", "google-chrome", "google-chrome-stable"):
+        path = shutil.which(name)
+        if path:
+            return path
+    for path in ("/usr/bin/chromium", "/usr/bin/chromium-browser"):
+        if os.path.exists(path):
+            return path
+    return None  # Playwright falls back to its bundled chromium
+
+
 def main():
     slugs = get_slugs()
     routes = ["/"] + [f"/locksmith/{s}" for s in slugs]
@@ -44,7 +60,11 @@ def main():
     try:
         assert wait_port(PORT), "static server did not start"
         with sync_playwright() as p:
-            browser = p.chromium.launch(executable_path="/usr/bin/chromium", args=["--no-sandbox"])
+            launch_args = {"args": ["--no-sandbox"]}
+            chromium = find_chromium()
+            if chromium:
+                launch_args["executable_path"] = chromium
+            browser = p.chromium.launch(**launch_args)
             errors = []
 
             for route in routes:
