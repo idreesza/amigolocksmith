@@ -1,7 +1,7 @@
-name: Build & Deploy to Vercel
+name: Build & Deploy to GitHub Pages
 
-# Every push to main: typecheck + Vite build → static prerender of all 28
-# routes (home + 27 city pages) → deploy the prebuilt static site to Vercel.
+# Every push to main: typecheck + Vite build -> static prerender of all 28
+# routes (home + 27 city pages) -> deploy the prebuilt static site to GitHub Pages.
 
 on:
   push:
@@ -9,12 +9,20 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: vercel-deploy
+  group: pages
   cancel-in-progress: true
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -44,9 +52,17 @@ jobs:
       - name: Pre-render all routes to static HTML
         run: python3 scripts/prerender.py
 
-      - name: Deploy dist/ to Vercel (production)
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-        run: npx vercel deploy dist --prod --yes --token "$VERCEL_TOKEN"
+      - name: Add CNAME for custom domain
+        run: echo "amigolocksmith.com" > dist/CNAME
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
