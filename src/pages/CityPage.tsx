@@ -9,6 +9,8 @@ import { getCity } from "@/data/cities";
 import { PRICING, SERVICES, SITE } from "@/lib/site";
 
 /** Sets per-city document title, meta description, canonical and JSON-LD. */
+let homeFaqBackup: string | null = null;
+
 function CitySeo({ slug, name, eta, localQ }: { slug: string; name: string; eta: string; localQ: { q: string; a: string } }) {
   useEffect(() => {
     const title = `24/7 Locksmith ${name} TX | Amigo Locksmith — Mobile Locksmith | (682) 666-2966`;
@@ -101,6 +103,15 @@ function CitySeo({ slug, name, eta, localQ }: { slug: string; name: string; eta:
         },
       ],
     };
+    // City pages carry their own FAQPage schema — remove the homepage's to avoid duplicates
+    const homeFaq = document.getElementById("home-faq-schema");
+    if (homeFaq) {
+      homeFaqBackup = homeFaq.textContent;
+      homeFaq.remove();
+    }
+    // Avoid duplicate city-schema elements (e.g. re-mount after prerendered HTML)
+    document.getElementById("city-schema")?.remove();
+
     const el = document.createElement("script");
     el.type = "application/ld+json";
     el.id = "city-schema";
@@ -114,6 +125,14 @@ function CitySeo({ slug, name, eta, localQ }: { slug: string; name: string; eta:
       if (md) md.content = HOME_DESC;
       const can = document.head.querySelector<HTMLLinkElement>('link[rel="canonical"]');
       if (can) can.href = `${SITE.url}/`;
+      // Restore homepage FAQPage schema
+      if (homeFaqBackup && !document.getElementById("home-faq-schema")) {
+        const faq = document.createElement("script");
+        faq.type = "application/ld+json";
+        faq.id = "home-faq-schema";
+        faq.textContent = homeFaqBackup;
+        document.head.appendChild(faq);
+      }
     };
   }, [slug, name, eta, localQ]);
   return null;
