@@ -18,6 +18,9 @@ from playwright.sync_api import sync_playwright
 
 DIST = Path(__file__).resolve().parent.parent / "dist"
 PORT = 8899
+# Vite build base — '/amigolocksmith/' on CI (GitHub Pages subpath), './' locally
+BASE_PATH = os.environ.get("PRERENDER_BASE", "/amigolocksmith/")
+BASE_DIR = BASE_PATH.strip("/")
 
 def get_slugs():
     src = (Path(__file__).resolve().parent.parent / "src/data/cities.ts").read_text()
@@ -53,9 +56,20 @@ def main():
     routes = ["/"] + [f"/locksmith/{s}" for s in slugs]
     print(f"Prerendering {len(routes)} routes...")
 
+    # when base is a subpath, copy dist into a temp dir under <base>/ so
+    # http.server serves /<base>/... exactly like GitHub Pages would.
+    # (sandbox mount doesn't support symlinks, so we copy instead)
+    if BASE_DIR:
+        import tempfile, shutil
+        serve_root = Path(tempfile.mkdtemp(prefix="prerender-"))
+        shutil.copytree(DIST, serve_root / BASE_DIR)
+    else:
+        serve_root = DIST
+    entry = f"/{BASE_DIR}/" if BASE_DIR else "/"
+
     server = subprocess.Popen(
         [sys.executable, "-m", "http.server", str(PORT), "--bind", "127.0.0.1"],
-        cwd=DIST, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+        cwd=serve_root, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
     )
     try:
         assert wait_port(PORT), "static server did not start"
@@ -69,11 +83,11 @@ def main():
 
             for route in routes:
                 page = browser.new_page(viewport={"width": 1440, "height": 950})
-                page.goto(f"http://127.0.0.1:{PORT}/", wait_until="networkidle")
+                page.goto(f"http://127.0.0.1:{PORT}{entry}", wait_until="networkidle")
                 if route != "/":
                     page.evaluate(
                         "r => { window.history.pushState({}, '', r); window.dispatchEvent(new PopStateEvent('popstate')); }",
-                        route,
+                        entry + route.lstrip("/"),
                     )
                 # wait until the route's React page has actually rendered
                 page.wait_for_function(
