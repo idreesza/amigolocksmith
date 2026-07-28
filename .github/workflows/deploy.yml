@@ -33,9 +33,15 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        # npm install is more resilient than npm ci on GH runners (npm ci can
-        # hit an "Exit handler never called" npm-internal crash)
-        run: npm install --no-audit --no-fund
+        # npm on GH runners intermittently crashes ("Exit handler never called");
+        # retry up to 3 times before failing the job
+        run: |
+          for i in 1 2 3; do
+            npm install --no-audit --no-fund && break
+            echo "npm install failed (attempt $i), retrying..."
+            sleep 10
+          done
+          test -d node_modules/react-router || { echo "deps missing after retries"; exit 1; }
 
       - name: Build (TypeScript + Vite)
         run: npm run build
