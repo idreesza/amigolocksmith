@@ -31,10 +31,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
 
       - name: Install dependencies
-        run: npm ci
+        # npm install is more resilient than npm ci on GH runners (npm ci can
+        # hit an "Exit handler never called" npm-internal crash)
+        run: npm install --no-audit --no-fund
 
       - name: Build (TypeScript + Vite)
         run: npm run build
