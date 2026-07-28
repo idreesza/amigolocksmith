@@ -2,7 +2,7 @@ import { HeartHandshake } from "lucide-react"
 import { ShieldCheck } from "lucide-react"
 import { Timer } from "lucide-react";
 import Reveal from "@/components/Reveal";
-import { SITE } from "@/lib/site";
+import { SITE, asset } from "@/lib/site";
 
 const STATS = [
   { value: "12k+", label: "Jobs completed across DFW" },
@@ -20,7 +20,7 @@ export default function About() {
             <div className="relative">
               <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-tr from-amber-400/20 to-transparent blur-2xl" aria-hidden />
               <img
-                src="/images/about-technician.jpg"
+                src={asset("/images/about-technician.jpg")}
                 alt="Amigo Locksmith locksmith technician in front of a mobile service van in Grand Prairie, TX"
                 loading="lazy"
                 className="relative w-full rounded-[2rem] border border-slate-700/60 object-cover shadow-2xl"

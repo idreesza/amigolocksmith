@@ -3,6 +3,11 @@
 
 import { CITY_PAGES } from "@/data/cities";
 
+/** Prefixes public-asset paths with the Vite base so images work both
+ *  locally (base './') and on GitHub Pages (base '/amigolocksmith/'). */
+export const asset = (path: string) =>
+  `${import.meta.env.BASE_URL.replace(/\/$/, "")}${path}`;
+
 export const SITE = {
   name: "Amigo Locksmith",
   tagline: "The Locksmith That Comes to You — 24/7 Across DFW",
@@ -43,7 +48,7 @@ export const SERVICES: Service[] = [
       "Trunk lockouts",
       "Motorcycle & RV keys",
     ],
-    image: "/images/automotive-locksmith.jpg",
+    image: asset("/images/automotive-locksmith.jpg"),
   },
   {
     title: "Residential Locksmith",
@@ -58,7 +63,7 @@ export const SERVICES: Service[] = [
       "Broken key extraction",
       "New-home rekey packages",
     ],
-    image: "/images/residential-locksmith.jpg",
+    image: asset("/images/residential-locksmith.jpg"),
   },
   {
     title: "Commercial Locksmith",
@@ -73,7 +78,7 @@ export const SERVICES: Service[] = [
       "Office rekeying after turnover",
       "File cabinet, desk & safe locks",
     ],
-    image: "/images/commercial-locksmith.jpg",
+    image: asset("/images/commercial-locksmith.jpg"),
   },
 ];
 

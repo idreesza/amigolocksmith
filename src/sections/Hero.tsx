@@ -5,7 +5,7 @@ import { ShieldCheck } from "lucide-react"
 import { Star } from "lucide-react"
 import { Zap } from "lucide-react";
 import ExpandableText from "@/components/ExpandableText";
-import { SITE } from "@/lib/site";
+import { SITE, asset } from "@/lib/site";
 
 const badges = [
   { icon: Clock, label: "24/7 — Nights, Weekends & Holidays" },
@@ -19,8 +19,8 @@ export default function Hero() {
       {/* Background image + overlays */}
       <div className="absolute inset-0">
         <img
-          src="/images/hero-locksmith.jpg"
-          srcSet="/images/hero-locksmith-mobile.jpg 800w, /images/hero-locksmith.jpg 1600w"
+          src={asset("/images/hero-locksmith.jpg")}
+          srcSet={`${asset("/images/hero-locksmith-mobile.jpg")} 800w, ${asset("/images/hero-locksmith.jpg")} 1600w`}
           sizes="100vw"
           alt="Amigo Locksmith branded mobile service van with a technician cutting keys on-site at dusk in Grand Prairie, TX"
           className="h-full w-full object-cover object-right"
