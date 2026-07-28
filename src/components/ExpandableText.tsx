@@ -1,14 +1,18 @@
-import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import { ChevronDown } from "lucide-react";
 
 /**
- * Mobile: shows the first line truncated with an ellipsis; tapping expands in
- * place with a smooth height animation (read-more / accordion pattern).
+ * Mobile: shows the first lines truncated with an ellipsis; tapping expands
+ * in place with a smooth CSS animation (read-more / accordion pattern).
  * Desktop (sm+): always shows the full text.
  */
 export default function ExpandableText({ text }: { text: string }) {
   const [open, setOpen] = useState(false);
+  const [animKey, setAnimKey] = useState(0);
+
+  useEffect(() => {
+    setAnimKey((k) => k + 1);
+  }, [open]);
 
   return (
     <>
@@ -19,38 +23,16 @@ export default function ExpandableText({ text }: { text: string }) {
 
       {/* Mobile — truncated, tap to expand */}
       <div className="mt-6 sm:hidden">
-        <motion.div
-          initial={false}
-          animate={{ height: "auto" }}
-          transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-          className="overflow-hidden"
-        >
-          <AnimatePresence mode="wait" initial={false}>
-            {open ? (
-              <motion.p
-                key="full"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.25 }}
-                className="text-base leading-relaxed text-slate-300"
-              >
-                {text}
-              </motion.p>
-            ) : (
-              <motion.p
-                key="clamped"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.25 }}
-                className="line-clamp-2 text-base leading-relaxed text-slate-300"
-              >
-                {text}
-              </motion.p>
-            )}
-          </AnimatePresence>
-        </motion.div>
+        <div className="overflow-hidden">
+          <p
+            key={animKey}
+            className={`expandable-text text-base leading-relaxed text-slate-300 ${
+              open ? "" : "line-clamp-2"
+            }`}
+          >
+            {text}
+          </p>
+        </div>
 
         <button
           type="button"

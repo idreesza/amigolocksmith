@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { Phone } from "lucide-react";
 import { SITE } from "@/lib/site";
 
@@ -21,6 +20,7 @@ function WhatsAppIcon({ className }: { className?: string }) {
  * - Mobile: full-width "Emergency Call" bar with breathing red glow, shaking
  *   phone icon and blinking live dot; WhatsApp bubble stacked above it.
  * - Desktop: compact call pill bottom-right with WhatsApp bubble above.
+ * Entrance animations are pure CSS (no JS animation library).
  */
 export default function StickyCall() {
   const [show, setShow] = useState(false);
@@ -32,66 +32,50 @@ export default function StickyCall() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  if (!show) return null;
+
   return (
-    <AnimatePresence>
-      {show && (
-        <>
-          {/* WhatsApp — stacked above the call bar */}
-          <motion.a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.5 }}
-            transition={{ duration: 0.3 }}
-            className="fixed bottom-24 right-4 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg shadow-[#25D366]/40 transition hover:scale-105 hover:bg-[#1fbe5a] sm:bottom-24 sm:right-7"
-            aria-label={`Chat with Amigo Locksmith on WhatsApp at ${SITE.phone}`}
-          >
-            <WhatsAppIcon className="h-7 w-7" />
-          </motion.a>
+    <>
+      {/* WhatsApp — stacked above the call bar */}
+      <a
+        href={WHATSAPP_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="scale-in fixed bottom-24 right-4 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg shadow-[#25D366]/40 transition hover:scale-105 hover:bg-[#1fbe5a] sm:right-7"
+        aria-label={`Chat with Amigo Locksmith on WhatsApp at ${SITE.phone}`}
+      >
+        <WhatsAppIcon className="h-7 w-7" />
+      </a>
 
-          {/* Mobile — full-width emergency bar */}
-          <motion.div
-            initial={{ opacity: 0, y: 60 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 60 }}
-            transition={{ duration: 0.35 }}
-            className="fixed inset-x-4 bottom-5 z-40 sm:hidden"
-          >
-            <a
-              href={SITE.phoneHref}
-              className="animate-breathe-glow flex items-center justify-center gap-2.5 rounded-2xl bg-amber-400 px-4 py-4 text-base font-extrabold text-slate-900"
-              aria-label={`Emergency call — ${SITE.phone}`}
-            >
-              <span className="relative flex h-3 w-3">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-600 opacity-75" />
-                <span className="relative inline-flex h-3 w-3 rounded-full bg-red-600" />
-              </span>
-              <Phone className="animate-phone-shake h-5 w-5" strokeWidth={2.5} />
-              Emergency Call
-            </a>
-          </motion.div>
+      {/* Mobile — full-width emergency bar */}
+      <div className="pop-in fixed inset-x-4 bottom-5 z-40 sm:hidden">
+        <a
+          href={SITE.phoneHref}
+          className="animate-breathe-glow flex items-center justify-center gap-2.5 rounded-2xl bg-amber-400 px-4 py-4 text-base font-extrabold text-slate-900"
+          aria-label={`Emergency call — ${SITE.phone}`}
+        >
+          <span className="relative flex h-3 w-3">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-600 opacity-75" />
+            <span className="relative inline-flex h-3 w-3 rounded-full bg-red-600" />
+          </span>
+          <Phone className="animate-phone-shake h-5 w-5" strokeWidth={2.5} />
+          Emergency Call
+        </a>
+      </div>
 
-          {/* Desktop — compact pill */}
-          <motion.a
-            href={SITE.phoneHref}
-            initial={{ opacity: 0, y: 60 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 60 }}
-            transition={{ duration: 0.35 }}
-            className="glow-amber fixed bottom-6 right-6 z-40 hidden items-center gap-3 rounded-2xl bg-amber-400 px-6 py-4 text-base font-extrabold text-slate-900 sm:flex"
-            aria-label={`Call Amigo Locksmith now at ${SITE.phone}`}
-          >
-            <span className="relative flex h-3 w-3">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-slate-900 opacity-60" />
-              <span className="relative inline-flex h-3 w-3 rounded-full bg-slate-900" />
-            </span>
-            <Phone className="h-5 w-5" strokeWidth={2.5} />
-            Call Now — {SITE.phone}
-          </motion.a>
-        </>
-      )}
-    </AnimatePresence>
+      {/* Desktop — compact pill */}
+      <a
+        href={SITE.phoneHref}
+        className="pop-in glow-amber fixed bottom-6 right-6 z-40 hidden items-center gap-3 rounded-2xl bg-amber-400 px-6 py-4 text-base font-extrabold text-slate-900 sm:flex"
+        aria-label={`Call Amigo Locksmith now at ${SITE.phone}`}
+      >
+        <span className="relative flex h-3 w-3">
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-slate-900 opacity-60" />
+          <span className="relative inline-flex h-3 w-3 rounded-full bg-slate-900" />
+        </span>
+        <Phone className="h-5 w-5" strokeWidth={2.5} />
+        Call Now — {SITE.phone}
+      </a>
+    </>
   );
 }

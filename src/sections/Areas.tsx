@@ -1,5 +1,6 @@
 import { Link } from "react-router";
-import { MapPin, Phone } from "lucide-react";
+import { MapPin } from "lucide-react"
+import { Phone } from "lucide-react";
 import Reveal, { SectionHeading } from "@/components/Reveal";
 import { CITIES, SITE } from "@/lib/site";
 

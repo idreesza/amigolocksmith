@@ -145,3 +145,50 @@
 .animate-breathe-glow {
   animation: breathe-glow 1.8s ease-in-out infinite;
 }
+
+/* Expandable hero text (read-more) */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.expandable-text {
+  animation: fade-in 0.3s ease;
+}
+
+/* Entrance animations (replace framer-motion) */
+@keyframes enter-up {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.enter-up {
+  opacity: 0;
+  animation: enter-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.enter-up-30 { animation-name: enter-up; }
+.delay-350 { animation-delay: 0.35s; }
+.delay-800 { animation-delay: 0.8s; }
+
+@keyframes enter-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.enter-fade {
+  opacity: 0;
+  animation: enter-fade 1s ease 0.8s forwards;
+}
+
+@keyframes pop-in {
+  from { opacity: 0; transform: translateY(60px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.pop-in {
+  animation: pop-in 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.5); }
+  to { opacity: 1; transform: scale(1); }
+}
+.scale-in {
+  animation: scale-in 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}

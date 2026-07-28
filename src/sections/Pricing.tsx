@@ -1,4 +1,5 @@
-import { Info, Phone } from "lucide-react";
+import { Info } from "lucide-react"
+import { Phone } from "lucide-react";
 import Reveal, { SectionHeading } from "@/components/Reveal";
 import { PRICING, SITE } from "@/lib/site";
 

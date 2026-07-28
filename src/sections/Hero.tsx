@@ -1,5 +1,9 @@
-import { motion } from "framer-motion";
-import { Clock, MapPin, Phone, ShieldCheck, Star, Zap } from "lucide-react";
+import { Clock } from "lucide-react"
+import { MapPin } from "lucide-react"
+import { Phone } from "lucide-react"
+import { ShieldCheck } from "lucide-react"
+import { Star } from "lucide-react"
+import { Zap } from "lucide-react";
 import ExpandableText from "@/components/ExpandableText";
 import { SITE } from "@/lib/site";
 
@@ -16,6 +20,8 @@ export default function Hero() {
       <div className="absolute inset-0">
         <img
           src="/images/hero-locksmith.jpg"
+          srcSet="/images/hero-locksmith-mobile.jpg 800w, /images/hero-locksmith.jpg 1600w"
+          sizes="100vw"
           alt="Amigo Locksmith branded mobile service van with a technician cutting keys on-site at dusk in Grand Prairie, TX"
           className="h-full w-full object-cover object-right"
           fetchPriority="high"
@@ -25,12 +31,7 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 pb-16 pt-36 sm:px-6 sm:pb-24 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-          className="max-w-3xl"
-        >
+        <div className="enter-up max-w-3xl">
           <div className="inline-flex items-center gap-2 rounded-full border border-amber-400/40 bg-amber-400/10 px-4 py-1.5 text-sm font-semibold text-amber-300">
             <span className="relative flex h-2.5 w-2.5">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-400 opacity-75" />
@@ -74,14 +75,9 @@ export default function Hero() {
               pricing, no surprises
             </span>
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-12 grid gap-3 sm:grid-cols-3"
-        >
+        <div className="enter-up delay-350 mt-12 grid gap-3 sm:grid-cols-3">
           {badges.map(({ icon: Icon, label }) => (
             <div
               key={label}
@@ -91,18 +87,13 @@ export default function Hero() {
               <span className="text-sm font-semibold text-slate-200">{label}</span>
             </div>
           ))}
-        </motion.div>
+        </div>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8, duration: 1 }}
-          className="mt-10 flex items-center gap-2 text-sm font-medium text-slate-400"
-        >
+        <p className="enter-fade mt-10 flex items-center gap-2 text-sm font-medium text-slate-400">
           <MapPin className="h-4 w-4 text-amber-400" />
           Grand Prairie · Arlington · Irving · Dallas · Fort Worth · Mansfield · Duncanville ·
           Cedar Hill · Plano · Frisco
-        </motion.p>
+        </p>
       </div>
     </section>
   );

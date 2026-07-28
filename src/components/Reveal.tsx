@@ -1,29 +1,52 @@
-import { motion, useInView } from "framer-motion";
-import { useRef, type ReactNode } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
 
-type Props = {
+/**
+ * Lightweight scroll-reveal — replaces framer-motion's 42KB chunk.
+ * Elements start transparent/offset and animate in via CSS transition
+ * the first time they enter the viewport (IntersectionObserver).
+ * During static prerender, elements are painted visible (no-FOUC-safe).
+ */
+export default function Reveal({
+  children,
+  delay = 0,
+  y = 28,
+  className,
+  id,
+}: {
   children: ReactNode;
   delay?: number;
   y?: number;
   className?: string;
   id?: string;
-};
-
-/** Fade-and-rise scroll reveal wrapper. */
-export default function Reveal({ children, delay = 0, y = 28, className, id }: Props) {
+}) {
   const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-80px" });
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    el.style.opacity = "0";
+    el.style.transform = `translateY(${y}px)`;
+    el.style.transition = `opacity 0.7s cubic-bezier(0.22,1,0.36,1) ${delay}s, transform 0.7s cubic-bezier(0.22,1,0.36,1) ${delay}s`;
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            el.style.opacity = "1";
+            el.style.transform = "translateY(0)";
+            io.disconnect();
+          }
+        }
+      },
+      { rootMargin: "-80px" }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, [delay, y]);
+
   return (
-    <motion.div
-      ref={ref}
-      id={id}
-      className={className}
-      initial={{ opacity: 0, y }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] }}
-    >
+    <div ref={ref} id={id} className={className}>
       {children}
-    </motion.div>
+    </div>
   );
 }
 

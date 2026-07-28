@@ -1,4 +1,6 @@
-import { Check, Phone, Siren } from "lucide-react";
+import { Check } from "lucide-react"
+import { Phone } from "lucide-react"
+import { Siren } from "lucide-react";
 import Reveal, { SectionHeading } from "@/components/Reveal";
 import { EMERGENCY_SERVICES, SERVICES, SITE } from "@/lib/site";
 

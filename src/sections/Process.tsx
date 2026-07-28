@@ -1,4 +1,7 @@
-import { PhoneCall, Route, Wrench, BadgeCheck } from "lucide-react";
+import { PhoneCall } from "lucide-react"
+import { Route } from "lucide-react"
+import { Wrench } from "lucide-react"
+import { BadgeCheck } from "lucide-react";
 import Reveal, { SectionHeading } from "@/components/Reveal";
 import { SITE } from "@/lib/site";
 

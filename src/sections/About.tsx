@@ -1,4 +1,6 @@
-import { HeartHandshake, ShieldCheck, Timer } from "lucide-react";
+import { HeartHandshake } from "lucide-react"
+import { ShieldCheck } from "lucide-react"
+import { Timer } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import { SITE } from "@/lib/site";
 

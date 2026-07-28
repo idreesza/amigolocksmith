@@ -1,5 +1,9 @@
 import { useState, type FormEvent } from "react";
-import { Clock, Mail, MapPin, Phone, Send } from "lucide-react";
+import { Clock } from "lucide-react"
+import { Mail } from "lucide-react"
+import { MapPin } from "lucide-react"
+import { Phone } from "lucide-react"
+import { Send } from "lucide-react";
 import Reveal, { SectionHeading } from "@/components/Reveal";
 import { CITIES, SITE } from "@/lib/site";
 

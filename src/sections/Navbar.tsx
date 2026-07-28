@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router";
-import { Menu, Phone, X, KeyRound } from "lucide-react";
+import { Menu } from "lucide-react"
+import { Phone } from "lucide-react"
+import { X } from "lucide-react"
+import { KeyRound } from "lucide-react";
 import { NAV_LINKS, SITE } from "@/lib/site";
 
 export default function Navbar() {

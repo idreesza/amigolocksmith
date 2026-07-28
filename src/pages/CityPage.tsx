@@ -1,6 +1,12 @@
 import { useEffect } from "react";
 import { Link, Navigate, useParams } from "react-router";
-import { Check, Clock, Landmark, MapPin, Navigation, Phone, ShieldCheck } from "lucide-react";
+import { Check } from "lucide-react"
+import { Clock } from "lucide-react"
+import { Landmark } from "lucide-react"
+import { MapPin } from "lucide-react"
+import { Navigation } from "lucide-react"
+import { Phone } from "lucide-react"
+import { ShieldCheck } from "lucide-react";
 import Navbar from "@/sections/Navbar";
 import Footer from "@/sections/Footer";
 import StickyCall from "@/sections/StickyCall";

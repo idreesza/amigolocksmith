@@ -1,5 +1,7 @@
 import { Link } from "react-router";
-import { KeyRound, Mail, Phone } from "lucide-react";
+import { KeyRound } from "lucide-react"
+import { Mail } from "lucide-react"
+import { Phone } from "lucide-react";
 import { CITIES, NAV_LINKS, SERVICES, SITE } from "@/lib/site";
 
 export default function Footer() {

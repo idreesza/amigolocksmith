@@ -1,4 +1,5 @@
-import { Quote, Star } from "lucide-react";
+import { Quote } from "lucide-react"
+import { Star } from "lucide-react";
 import Reveal, { SectionHeading } from "@/components/Reveal";
 import { REVIEWS } from "@/lib/site";
 

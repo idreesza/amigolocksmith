@@ -1,4 +1,9 @@
-import { BadgeDollarSign, Clock3, MapPinned, ShieldCheck, Sparkles, Wrench } from "lucide-react";
+import { BadgeDollarSign } from "lucide-react"
+import { Clock3 } from "lucide-react"
+import { MapPinned } from "lucide-react"
+import { ShieldCheck } from "lucide-react"
+import { Sparkles } from "lucide-react"
+import { Wrench } from "lucide-react";
 import Reveal, { SectionHeading } from "@/components/Reveal";
 
 const REASONS = [
