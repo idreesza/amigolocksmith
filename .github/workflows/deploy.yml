@@ -27,21 +27,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: pnpm
 
       - name: Install dependencies
-        # npm on GH runners intermittently crashes ("Exit handler never called");
-        # retry up to 3 times before failing the job
-        run: |
-          for i in 1 2 3; do
-            npm install --no-audit --no-fund && break
-            echo "npm install failed (attempt $i), retrying..."
-            sleep 10
-          done
-          test -d node_modules/react-router || { echo "deps missing after retries"; exit 1; }
+        run: pnpm install --frozen-lockfile
 
       - name: Build (TypeScript + Vite)
         run: npm run build
