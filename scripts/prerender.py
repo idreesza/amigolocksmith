@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Static pre-rendering (SSG) for the Amigo Locksmith site.
+Static pre-rendering (SSG) for the Dfwkeymaster site.
 
 Run AFTER `npm run build`. Serves dist/, loads every route in headless
 Chromium, waits for the client app to fully render (including per-route
@@ -100,7 +100,7 @@ def main():
                 title = page.title()
                 canon = page.evaluate("document.querySelector('link[rel=canonical]')?.href || ''")
                 ld_count = page.eval_on_selector_all('script[type="application/ld+json"]', "e => e.length")
-                if route == "/" and "Grand Prairie TX | Amigo" not in title:
+                if route == "/" and "Grand Prairie TX | Dfwkeymaster" not in title:
                     errors.append(f"{route}: unexpected title '{title}'")
                 if route != "/":
                     # compare against expected city name from the slug (handles DeSoto etc.)

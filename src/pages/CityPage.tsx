@@ -19,8 +19,8 @@ let homeFaqBackup: string | null = null;
 
 function CitySeo({ slug, name, eta, localQ }: { slug: string; name: string; eta: string; localQ: { q: string; a: string } }) {
   useEffect(() => {
-    const title = `24/7 Locksmith ${name} TX | Amigo Locksmith — Mobile Locksmith | (682) 666-2966`;
-    const desc = `Locked out in ${name}, TX? Amigo Locksmith's 24/7 mobile locksmith serves ${name} with ${eta} average arrival. Car lockouts starting at $65, key fob programming, home rekeys & commercial security. Call (682) 666-2966.`;
+    const title = `24/7 Locksmith ${name} TX | Dfwkeymaster — Mobile Locksmith | (682) 666-2966`;
+    const desc = `Locked out in ${name}, TX? Dfwkeymaster's 24/7 mobile locksmith serves ${name} with ${eta} average arrival. Car lockouts starting at $65, key fob programming, home rekeys & commercial security. Call (682) 666-2966.`;
     document.title = title;
 
     const setMeta = (attr: "name" | "property", key: string, content: string) => {
@@ -89,7 +89,7 @@ function CitySeo({ slug, name, eta, localQ }: { slug: string; name: string; eta:
               name: `How fast can a locksmith get to me in ${name}?`,
               acceptedAnswer: {
                 "@type": "Answer",
-                text: `Amigo Locksmith averages ${eta} arrival anywhere in ${name}, 24 hours a day — including nights, weekends and holidays. Because our mobile units stage across the metroplex, you always get a real ETA when you call ${SITE.phone}.`,
+                text: `Dfwkeymaster averages ${eta} arrival anywhere in ${name}, 24 hours a day — including nights, weekends and holidays. Because our mobile units stage across the metroplex, you always get a real ETA when you call ${SITE.phone}.`,
               },
             },
             {
@@ -144,8 +144,8 @@ function CitySeo({ slug, name, eta, localQ }: { slug: string; name: string; eta:
   return null;
 }
 
-const HOME_TITLE = "24/7 Locksmith Grand Prairie TX | Amigo Locksmith — Mobile Locksmith DFW | (682) 666-2966";
-const HOME_DESC = "Amigo Locksmith is a 24/7 mobile locksmith in Grand Prairie, TX serving the entire Dallas–Fort Worth metroplex. Car lockouts starting at $65, key fob programming, home rekeys & commercial security. Average 15–25 min arrival. Call (682) 666-2966.";
+const HOME_TITLE = "24/7 Locksmith Grand Prairie TX | Dfwkeymaster — Mobile Locksmith DFW | (682) 666-2966";
+const HOME_DESC = "Dfwkeymaster is a 24/7 mobile locksmith in Grand Prairie, TX serving the entire Dallas–Fort Worth metroplex. Car lockouts starting at $65, key fob programming, home rekeys & commercial security. Average 15–25 min arrival. Call (682) 666-2966.";
 
 export default function CityPage() {
   const { slug = "" } = useParams();
@@ -160,7 +160,7 @@ export default function CityPage() {
   const faqs = [
     {
       q: `How fast can a locksmith get to me in ${city.name}?`,
-      a: `Amigo Locksmith averages ${city.eta} arrival anywhere in ${city.name}, 24 hours a day — including nights, weekends and holidays. Because our mobile units stage across the metroplex, you always get a real ETA when you call ${SITE.phone}.`,
+      a: `Dfwkeymaster averages ${city.eta} arrival anywhere in ${city.name}, 24 hours a day — including nights, weekends and holidays. Because our mobile units stage across the metroplex, you always get a real ETA when you call ${SITE.phone}.`,
     },
     city.localQ,
     {

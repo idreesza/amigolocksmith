@@ -42,7 +42,7 @@ export default function StickyCall() {
         target="_blank"
         rel="noopener noreferrer"
         className="scale-in fixed bottom-24 right-4 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg shadow-[#25D366]/40 transition hover:scale-105 hover:bg-[#1fbe5a] sm:right-7"
-        aria-label={`Chat with Amigo Locksmith on WhatsApp at ${SITE.phone}`}
+        aria-label={`Chat with Dfwkeymaster on WhatsApp at ${SITE.phone}`}
       >
         <WhatsAppIcon className="h-7 w-7" />
       </a>
@@ -67,7 +67,7 @@ export default function StickyCall() {
       <a
         href={SITE.phoneHref}
         className="pop-in glow-amber fixed bottom-6 right-6 z-40 hidden items-center gap-3 rounded-2xl bg-amber-400 px-6 py-4 text-base font-extrabold text-slate-900 sm:flex"
-        aria-label={`Call Amigo Locksmith now at ${SITE.phone}`}
+        aria-label={`Call Dfwkeymaster now at ${SITE.phone}`}
       >
         <span className="relative flex h-3 w-3">
           <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-slate-900 opacity-60" />

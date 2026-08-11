@@ -44,13 +44,13 @@ export default function WhyUs() {
     <section className="relative bg-[#0D1B33] py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          kicker="Why Amigo Locksmith"
+          kicker="Why Dfwkeymaster"
           title={
             <>
               The Difference Is <span className="text-gradient-amber">in the Details</span>
             </>
           }
-          sub="Locksmith scams are everywhere — $19 callout ads that turn into $300 bills. We built Amigo Locksmith to be the company we'd want to call."
+          sub="Locksmith scams are everywhere — $19 callout ads that turn into $300 bills. We built Dfwkeymaster to be the company we'd want to call."
         />
         <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {REASONS.map((r, i) => (

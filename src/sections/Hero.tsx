@@ -22,7 +22,7 @@ export default function Hero() {
           src={asset("/images/hero-locksmith.jpg")}
           srcSet={`${asset("/images/hero-locksmith-mobile.jpg")} 800w, ${asset("/images/hero-locksmith.jpg")} 1600w`}
           sizes="100vw"
-          alt="Amigo Locksmith branded mobile service van with a technician cutting keys on-site at dusk in Grand Prairie, TX"
+          alt="Dfwkeymaster branded mobile service van with a technician cutting keys on-site at dusk in Grand Prairie, TX"
           className="h-full w-full object-cover object-right"
           fetchPriority="high"
         />
@@ -46,7 +46,7 @@ export default function Hero() {
             We're Already on Our Way.
           </h1>
 
-          <ExpandableText text="Amigo Locksmith is DFW's 24/7 mobile locksmith — car lockouts, key fob programming, home rekeys and commercial security, done on the spot wherever you are. Serving Grand Prairie, Arlington, Irving, Dallas, Fort Worth and the entire metroplex." />
+          <ExpandableText text="Dfwkeymaster is DFW's 24/7 mobile locksmith — car lockouts, key fob programming, home rekeys and commercial security, done on the spot wherever you are. Serving Grand Prairie, Arlington, Irving, Dallas, Fort Worth and the entire metroplex." />
 
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
             <a

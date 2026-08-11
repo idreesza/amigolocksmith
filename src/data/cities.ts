@@ -22,7 +22,7 @@ export const CITY_PAGES: CityInfo[] = [
     blurb: "Our home base — the fastest response in the metroplex.",
     tagline: "Our home base. Your fastest locksmith response in all of DFW.",
     intro: [
-      "Amigo Locksmith is headquartered right here in Grand Prairie — which means when you're locked out at Grand Prairie Premium Outlets, stranded near Epic Waters, or need every lock rekeyed on a new home in Mira Lagos, the closest mobile locksmith shop in the entire metroplex is already in your city.",
+      "Dfwkeymaster is headquartered right here in Grand Prairie — which means when you're locked out at Grand Prairie Premium Outlets, stranded near Epic Waters, or need every lock rekeyed on a new home in Mira Lagos, the closest mobile locksmith shop in the entire metroplex is already in your city.",
       "Our vans stage throughout Grand Prairie day and night, from the entertainment district along I-30 to the lakeside neighborhoods near Joe Pool Lake. Every unit carries key-cutting machines, OEM-grade programmers and a full hardware inventory, so whether it's a car lockout, a lost smart key, or a commercial master key system, we finish the job where you are — no towing, no waiting days for parts.",
       "Because this is home, Grand Prairie customers get our fastest average arrival: 15–25 minutes, 24/7, including holidays.",
     ],
@@ -41,7 +41,7 @@ export const CITY_PAGES: CityInfo[] = [
     blurb: "From AT&T Stadium to Lake Arlington, we cover every neighborhood.",
     tagline: "Stadium district to Lake Arlington — 24/7 mobile locksmith coverage.",
     intro: [
-      "Arlington is the entertainment heart of DFW — and one of the easiest places in Texas to lock your keys in the car. Whether you're leaving a game at AT&T Stadium, a concert at Globe Life Field, or a day at Six Flags, Amigo Locksmith's mobile units are minutes away with everything needed to get you back on the road.",
+      "Arlington is the entertainment heart of DFW — and one of the easiest places in Texas to lock your keys in the car. Whether you're leaving a game at AT&T Stadium, a concert at Globe Life Field, or a day at Six Flags, Dfwkeymaster's mobile units are minutes away with everything needed to get you back on the road.",
       "We're equally at home in Arlington's neighborhoods: rekeying new builds in Viridian, installing smart locks in North Arlington, programming key fobs for UTA students, and servicing storefronts and offices along Cooper Street and Collins. One call brings a fully stocked locksmith shop to your curb, 24/7.",
     ],
     neighborhoods: ["Viridian", "North Arlington", "Southwest Arlington", "East Arlington", "Fielder Park", "Downtown Arlington", "Lake Arlington area", "Interlochen"],
@@ -59,7 +59,7 @@ export const CITY_PAGES: CityInfo[] = [
     blurb: "Las Colinas, Valley Ranch and all Irving business districts.",
     tagline: "From Las Colinas towers to Valley Ranch homes — we come to you.",
     intro: [
-      "Irving is a city of commuters, corporate campuses and high-rise living — and our locksmiths know every corner of it. Locked out of your office in Las Colinas? Lost your only car key at the Toyota Music Factory? Need a master key system for a suite off Highway 114? Amigo Locksmith dispatches a fully equipped mobile unit to you, usually within 20–30 minutes.",
+      "Irving is a city of commuters, corporate campuses and high-rise living — and our locksmiths know every corner of it. Locked out of your office in Las Colinas? Lost your only car key at the Toyota Music Factory? Need a master key system for a suite off Highway 114? Dfwkeymaster dispatches a fully equipped mobile unit to you, usually within 20–30 minutes.",
       "On the residential side, we rekey homes and townhomes across Valley Ranch, Hackberry Creek and historic downtown Irving, install keypad and smart locks for apartment dwellers (with landlord approval), and program transponder and proximity keys for nearly every make on the road.",
     ],
     neighborhoods: ["Las Colinas", "Valley Ranch", "Hackberry Creek", "Cottonwood Valley", "Historic Downtown Irving", "University of Dallas area", "Irving Heights", "Woodhaven"],
@@ -77,7 +77,7 @@ export const CITY_PAGES: CityInfo[] = [
     blurb: "Downtown, Uptown, Oak Cliff, Lake Highlands and beyond.",
     tagline: "Deep Ellum to Lake Highlands — the whole city, day and night.",
     intro: [
-      "Dallas is big — and when you're locked out downtown at midnight or your fob dies in a Bishop Arts parking spot, you don't have time to wait for a locksmith driving in from the suburbs. Amigo Locksmith stages mobile units across Dallas proper, with average arrival of 25–40 minutes anywhere in the city.",
+      "Dallas is big — and when you're locked out downtown at midnight or your fob dies in a Bishop Arts parking spot, you don't have time to wait for a locksmith driving in from the suburbs. Dfwkeymaster stages mobile units across Dallas proper, with average arrival of 25–40 minutes anywhere in the city.",
       "We handle the full spectrum of Dallas locksmith work: high-rise condo lockouts in Uptown, rekeys on craftsman homes in Oak Cliff, smart lock installs in Lake Highlands, storefront security along Jefferson Boulevard, and car key programming everywhere from White Rock Lake to North Dallas. Up-front pricing, damage-free entry, and a real ETA every time.",
     ],
     neighborhoods: ["Downtown", "Uptown", "Deep Ellum", "Oak Cliff", "Bishop Arts", "Lake Highlands", "Lakewood", "North Dallas", "Pleasant Grove", "Oak Lawn"],
@@ -95,7 +95,7 @@ export const CITY_PAGES: CityInfo[] = [
     blurb: "Sundance Square to Alliance — full coverage west of Grand Prairie.",
     tagline: "Stockyards, Sundance, Alliance and everything in between.",
     intro: [
-      "Fort Worth keeps its Western soul — and its fair share of lockouts, from Sundance Square garages to Stockyards parking lots. Amigo Locksmith's mobile units cover the entire city, with 30–45 minute average arrival and true 24/7 dispatch.",
+      "Fort Worth keeps its Western soul — and its fair share of lockouts, from Sundance Square garages to Stockyards parking lots. Dfwkeymaster's mobile units cover the entire city, with 30–45 minute average arrival and true 24/7 dispatch.",
       "We serve TCU-area rentals, historic homes in Fairmount, new construction near Alliance, and businesses along West 7th and Camp Bowie. Car key programming, home rekeys, commercial master key systems — every service performed on-site by a licensed, background-checked technician with the price quoted before we start.",
     ],
     neighborhoods: ["Downtown / Sundance Square", "West 7th", "Fairmount", "TCU area", "Alliance", "Northside / Stockyards", "Wedgwood", "Hulen", "Ridglea"],
@@ -113,7 +113,7 @@ export const CITY_PAGES: CityInfo[] = [
     blurb: "New developments and established neighborhoods alike.",
     tagline: "Fast-growing city, faster locksmith response.",
     intro: [
-      "Mansfield is one of the fastest-growing cities in Texas — and with every new neighborhood comes move-in rekeys, smart lock upgrades and the occasional moving-day lockout. Amigo Locksmith covers all of Mansfield with 25–35 minute average arrival, 24/7.",
+      "Mansfield is one of the fastest-growing cities in Texas — and with every new neighborhood comes move-in rekeys, smart lock upgrades and the occasional moving-day lockout. Dfwkeymaster covers all of Mansfield with 25–35 minute average arrival, 24/7.",
       "From historic downtown homes to new construction along Highway 360, we rekey entire houses to a single key, install keypads and smart deadbolts, program car keys in your driveway, and secure the shops, restaurants and offices along Broad Street and Debbie Lane. One visit, quoted price, done right.",
     ],
     neighborhoods: ["Historic Downtown Mansfield", "Walnut Creek", "Heritage Estates", "Mira Lagos (south)", "Lowes Farm", "South Pointe", "The Preserve"],
@@ -149,7 +149,7 @@ export const CITY_PAGES: CityInfo[] = [
     blurb: "From Joe Pool Lake to the Hill Country retail corridor.",
     tagline: "Hilltop views, lake weekends — and a locksmith who reaches you fast.",
     intro: [
-      "Cedar Hill's mix of lake recreation, hillside neighborhoods and busy retail makes for every kind of locksmith call — boat-truck lockouts at Joe Pool Lake, home rekeys near Cedar Hill State Park, and storefront service at Hillside Village. Amigo Locksmith reaches any of it in 25–35 minutes on average.",
+      "Cedar Hill's mix of lake recreation, hillside neighborhoods and busy retail makes for every kind of locksmith call — boat-truck lockouts at Joe Pool Lake, home rekeys near Cedar Hill State Park, and storefront service at Hillside Village. Dfwkeymaster reaches any of it in 25–35 minutes on average.",
       "Our mobile units carry everything for on-the-spot service: key cutting and fob programming at the marina parking lot, smart lock installs in Dogwood Canyon-area homes, and commercial hardware for the FM 1382 corridor. Fully licensed, up-front pricing, 24/7.",
     ],
     neighborhoods: ["High Pointe", "Dogwood Canyon", "Lake Ridge", "Waterford Oaks", "Historic Downtown Cedar Hill", "Belt Line corridor"],
@@ -167,7 +167,7 @@ export const CITY_PAGES: CityInfo[] = [
     blurb: "Corporate campuses, retail and residential across Plano.",
     tagline: "Legacy West to downtown Plano — full mobile locksmith service.",
     intro: [
-      "Plano runs on precision — and so do we. From corporate campuses along Legacy Drive to the Shops at Legacy and quiet neighborhoods off Parker Road, Amigo Locksmith provides full mobile locksmith service across Plano with 35–50 minute average arrival.",
+      "Plano runs on precision — and so do we. From corporate campuses along Legacy Drive to the Shops at Legacy and quiet neighborhoods off Parker Road, Dfwkeymaster provides full mobile locksmith service across Plano with 35–50 minute average arrival.",
       "We're a favorite for Plano's car-heavy commuters: transponder and smart key programming on the spot, often 40–60% below dealer pricing. Homeowners call us for whole-house rekeys and smart lock upgrades, and businesses along the Dallas North Tollway trust us for master key systems, access control and code-compliant exit hardware.",
     ],
     neighborhoods: ["Legacy West area", "Downtown Plano", "Willow Bend", "Whiffletree", "Hedgcoxe", "Los Rios", "Oak Point", "Park Forest"],
@@ -185,7 +185,7 @@ export const CITY_PAGES: CityInfo[] = [
     blurb: "Fast-growing Frisco — we're already on the road there daily.",
     tagline: "From The Star to Stonebriar — locksmith service that keeps up with Frisco.",
     intro: [
-      "Frisco is booming — new homes, new businesses, and a steady stream of lockouts from The Star to Stonebriar Centre. Amigo Locksmith runs mobile units into Frisco daily, with 40–55 minute average arrival and the same up-front pricing we offer everywhere in DFW.",
+      "Frisco is booming — new homes, new businesses, and a steady stream of lockouts from The Star to Stonebriar Centre. Dfwkeymaster runs mobile units into Frisco daily, with 40–55 minute average arrival and the same up-front pricing we offer everywhere in DFW.",
       "New construction means move-in rekeys and smart lock installs; Frisco Square and the Rail District mean commercial lockouts and storefront service; and packed event parking at Toyota Stadium means lost-key calls we handle right in the lot. One call, one visit, everything done where you are.",
     ],
     neighborhoods: ["Frisco Square", "Rail District", "Stonebriar", "Starwood", "Phillips Creek Ranch", "Panther Creek", "Newman Village", "Lawler Park"],
@@ -224,7 +224,7 @@ CITY_PAGES.push(
     blurb: "Northeast Tarrant coverage, from North East Mall to Chisholm Park.",
     tagline: "Locked out in Hurst? The Mid-Cities' fastest help is one call away.",
     intro: [
-      "Hurst's central Mid-Cities location makes it one of our fastest service zones — average arrival of 20–30 minutes, 24/7. Whether you're locked out at North East Mall, need home locks rekeyed near Chisholm Park, or want a master key system for an office off Pipeline Road, Amigo Locksmith comes to you.",
+      "Hurst's central Mid-Cities location makes it one of our fastest service zones — average arrival of 20–30 minutes, 24/7. Whether you're locked out at North East Mall, need home locks rekeyed near Chisholm Park, or want a master key system for an office off Pipeline Road, Dfwkeymaster comes to you.",
       "Our mobile units carry key cutters, programmers and a full hardware wall, so car keys, home rekeys, smart locks and commercial hardware are all handled in a single visit, at a price quoted before we start.",
     ],
     neighborhoods: ["Bellaire", "Hurst Hills", "Wintergreen", "Shady Oaks", "Hurstview", "Pipeline corridor"],
@@ -242,7 +242,7 @@ CITY_PAGES.push(
     blurb: "HEB-area homes and businesses, covered 24/7.",
     tagline: "HEB's hometown locksmith — homes, cars and businesses.",
     intro: [
-      "Right in the middle of Hurst-Euless-Bedford, our vans reach Bedford in 20–30 minutes on average. From lockouts near Bedford Boys Ranch to rekeys in the established neighborhoods off Central Drive, Amigo Locksmith handles it all on-site — no towing, no return trips.",
+      "Right in the middle of Hurst-Euless-Bedford, our vans reach Bedford in 20–30 minutes on average. From lockouts near Bedford Boys Ranch to rekeys in the established neighborhoods off Central Drive, Dfwkeymaster handles it all on-site — no towing, no return trips.",
       "Bedford's mix of mature homes and busy retail along Harwood and Airport Freeway means steady demand for rekeys, deadbolt upgrades, car key programming and storefront service. Every job starts with a firm quote and ends with tested, guaranteed work.",
     ],
     neighborhoods: ["Bedford Heights", "Brookhollow", "Forest Creek", "Central Drive corridor", "Harwood Hills", "Bedford Meadows"],
@@ -260,7 +260,7 @@ CITY_PAGES.push(
     blurb: "Small-town service between Arlington and Mansfield.",
     tagline: "Kennedale may be small — our response there isn't slow.",
     intro: [
-      "Kennedale's quiet streets sit right between Arlington and Mansfield — squarely inside our fastest coverage zone, with 25–35 minute average arrival. Whether it's a lockout near Kennedale Speedway Park or a full rekey on a ranch-style home off Bowman Springs, Amigo Locksmith brings the whole shop to you.",
+      "Kennedale's quiet streets sit right between Arlington and Mansfield — squarely inside our fastest coverage zone, with 25–35 minute average arrival. Whether it's a lockout near Kennedale Speedway Park or a full rekey on a ranch-style home off Bowman Springs, Dfwkeymaster brings the whole shop to you.",
       "We serve Kennedale's homes, churches and small businesses with the same licensed, up-front-priced service we provide across DFW: lockouts, rekeys, smart locks, car key programming and light commercial hardware.",
     ],
     neighborhoods: ["Kennedale Old Town", "Briarwood", "Sonora Park area", "Village Creek corridor", "Woodland Hills"],
@@ -278,7 +278,7 @@ CITY_PAGES.push(
     blurb: "South Fort Worth suburb along I-35W.",
     tagline: "Quick help for Everman — just off I-35W, just minutes away.",
     intro: [
-      "Everman sits along the I-35W corridor in south Tarrant County — an easy, fast run for our mobile units, with 25–35 minute average arrival. Locked out of your car, need the house rekeyed after a move, or want sturdier deadbolts on an older home? Amigo Locksmith handles it on the spot.",
+      "Everman sits along the I-35W corridor in south Tarrant County — an easy, fast run for our mobile units, with 25–35 minute average arrival. Locked out of your car, need the house rekeyed after a move, or want sturdier deadbolts on an older home? Dfwkeymaster handles it on the spot.",
       "We keep Everman pricing simple and published: car lockouts starting at $65, house lockouts at $75, rekeys at $25 per cylinder — quoted in full before any work begins, 24/7.",
     ],
     neighborhoods: ["Everman Park area", "Christie Estates", "Oak Grove", "Barron Park", "I-35W corridor"],
@@ -296,7 +296,7 @@ CITY_PAGES.push(
     blurb: "Southeast Fort Worth coverage along I-20.",
     tagline: "Forest Hill's 24/7 locksmith — fast, local and up-front.",
     intro: [
-      "Forest Hill's neighborhoods along I-20 are well inside our southeast Tarrant coverage, with 25–35 minute average arrival around the clock. From car lockouts near Forest Hill Park to home rekeys off Wichita Street, Amigo Locksmith arrives with everything needed to finish in one visit.",
+      "Forest Hill's neighborhoods along I-20 are well inside our southeast Tarrant coverage, with 25–35 minute average arrival around the clock. From car lockouts near Forest Hill Park to home rekeys off Wichita Street, Dfwkeymaster arrives with everything needed to finish in one visit.",
       "Residents call us for affordable rekeys, deadbolt upgrades and damage-free lockouts; local businesses along Mansfield Highway call us for storefront locks, rekeys and exit hardware — always at a price quoted up-front.",
     ],
     neighborhoods: ["Forest Hill Park area", "Londa Estates", "Anglin Addition", "Wichita Street corridor", "Mansfield Highway corridor"],
@@ -314,7 +314,7 @@ CITY_PAGES.push(
     blurb: "Northwest DFW, minutes from DFW Airport.",
     tagline: "Airport-adjacent and always covered — Coppell's mobile locksmith.",
     intro: [
-      "Coppell's spot near DFW Airport makes it a regular stop for our mobile units — 30–45 minute average arrival. Whether you're locked out after a flight, need a rekey in Old Town Coppell, or want smart locks on a home near Andy Brown Park, Amigo Locksmith comes to you, 24/7.",
+      "Coppell's spot near DFW Airport makes it a regular stop for our mobile units — 30–45 minute average arrival. Whether you're locked out after a flight, need a rekey in Old Town Coppell, or want smart locks on a home near Andy Brown Park, Dfwkeymaster comes to you, 24/7.",
       "Coppell's commuters love our on-site transponder and proximity key programming at dealer-beating prices, while local offices along Freeport Parkway call us for master key systems and access control — all quoted before we start.",
     ],
     neighborhoods: ["Old Town Coppell", "Northlake Woodlands", "Coppell Greens", "Riverchase", "Sandy Lake area", "Parkview Estates"],
@@ -332,7 +332,7 @@ CITY_PAGES.push(
     blurb: "Historic Main Street to Grapevine Mills — full coverage.",
     tagline: "From Main Street wine bars to the Mills — we've got Grapevine covered.",
     intro: [
-      "Grapevine packs a lot into one city — a historic Main Street, a lake, one of Texas's biggest malls, and hotels everywhere. That means every kind of locksmith call, and Amigo Locksmith answers them all with 30–45 minute average arrival, 24/7.",
+      "Grapevine packs a lot into one city — a historic Main Street, a lake, one of Texas's biggest malls, and hotels everywhere. That means every kind of locksmith call, and Dfwkeymaster answers them all with 30–45 minute average arrival, 24/7.",
       "We rekey historic-district homes and new builds alike, program car keys at Grapevine Mills or the Gaylord Texan lots, and service Main Street's shops, tasting rooms and offices with storefront locks, master key systems and code-compliant exit hardware.",
     ],
     neighborhoods: ["Historic Downtown Grapevine", "Silver Lake", "Glade Crossing", "Cannon Gate", "Meadowmere", "Stone Bridge Oaks"],
@@ -368,7 +368,7 @@ CITY_PAGES.push(
     blurb: "Southern Dallas County, along I-35E.",
     tagline: "Lancaster's hometown help — 24/7, up-front and on the spot.",
     intro: [
-      "Lancaster's historic square and fast-growing neighborhoods are squarely inside our southern Dallas County zone — 25–35 minute average arrival, day and night. From lockouts near the Town Square to rekeys in new subdivisions off Pleasant Run, Amigo Locksmith brings the full shop to your curb.",
+      "Lancaster's historic square and fast-growing neighborhoods are squarely inside our southern Dallas County zone — 25–35 minute average arrival, day and night. From lockouts near the Town Square to rekeys in new subdivisions off Pleasant Run, Dfwkeymaster brings the full shop to your curb.",
       "Homeowners call us for move-in rekeys and deadbolt upgrades; drivers call us for on-the-spot key cutting and fob programming; and local businesses along I-35E call us for storefront service and exit hardware — all at published starting prices.",
     ],
     neighborhoods: ["Historic Town Square area", "Millbrook East", "Berkshire", "Houston School Road corridor", "Pleasant Run Estates"],
@@ -386,7 +386,7 @@ CITY_PAGES.push(
     blurb: "Best Southwest city on I-35E — full 24/7 coverage.",
     tagline: "DeSoto's 24/7 locksmith — Best Southwest, best response.",
     intro: [
-      "DeSoto anchors the Best Southwest, and it's one of our busiest southern zones — 25–35 minute average arrival, 24/7. Whether you're locked out near DeSoto Town Center, rekeying a home off Pleasant Run, or programming a key fob in your driveway, Amigo Locksmith does it all where you are.",
+      "DeSoto anchors the Best Southwest, and it's one of our busiest southern zones — 25–35 minute average arrival, 24/7. Whether you're locked out near DeSoto Town Center, rekeying a home off Pleasant Run, or programming a key fob in your driveway, Dfwkeymaster does it all where you are.",
       "We're the go-to for DeSoto's established neighborhoods (whole-house rekeys, smart lock upgrades) and its growing retail corridor along Hampton and I-35E (storefront locks, rekeys, exit devices) — always with the price quoted before we start.",
     ],
     neighborhoods: ["Eagle Estates", "Elerson Ranch", "Mockingbird Hills", "Silver Creek Estates", "DeSoto Ranch", "Hampton Road corridor"],
@@ -422,7 +422,7 @@ CITY_PAGES.push(
     blurb: "Southwest Fort Worth, on the shores of Benbrook Lake.",
     tagline: "Lake days and easy living — with a locksmith minutes away.",
     intro: [
-      "Benbrook's lakeside neighborhoods are a fast run for our southwest units — 25–35 minute average arrival, 24/7. Boat-truck lockout at Benbrook Lake, rekey on a home near Dutch Branch Park, or smart lock upgrade in Whitestone? Amigo Locksmith brings everything to you.",
+      "Benbrook's lakeside neighborhoods are a fast run for our southwest units — 25–35 minute average arrival, 24/7. Boat-truck lockout at Benbrook Lake, rekey on a home near Dutch Branch Park, or smart lock upgrade in Whitestone? Dfwkeymaster brings everything to you.",
       "We handle Benbrook's homes, vehicles and small businesses with the same licensed, up-front service we deliver across DFW: damage-free lockouts, whole-house rekeys, car key programming and commercial hardware — all in one visit.",
     ],
     neighborhoods: ["Whitestone", "Brookside", "Benbrook Lake area", "La Cantera", "Winscott", "Dutch Branch area"],
@@ -440,7 +440,7 @@ CITY_PAGES.push(
     blurb: "Growing Ellis County suburb on I-35E.",
     tagline: "Red Oak is growing fast — and we're already there.",
     intro: [
-      "Red Oak's rapid growth along I-35E means new homes, new businesses — and new locks that need rekeying. Amigo Locksmith covers Red Oak with 30–40 minute average arrival, 24/7, from the historic center to the newest subdivisions.",
+      "Red Oak's rapid growth along I-35E means new homes, new businesses — and new locks that need rekeying. Dfwkeymaster covers Red Oak with 30–40 minute average arrival, 24/7, from the historic center to the newest subdivisions.",
       "Move-in rekeys are our most common Red Oak call, alongside car key programming in driveways, smart lock installs, and storefront service for the growing retail along Ovilla Road — all at published starting prices.",
     ],
     neighborhoods: ["Red Oak town center", "Oak Leaf (nearby)", "Pecan Grove", "Ovilla Road corridor", "Woodridge Estates"],
@@ -476,7 +476,7 @@ CITY_PAGES.push(
     blurb: "Northeast Tarrant County, near North Richland Hills.",
     tagline: "Watauga's neighborhood locksmith — quick, local, up-front.",
     intro: [
-      "Watauga's tight-knit neighborhoods in northeast Tarrant County are well inside our coverage zone — 25–35 minute average arrival, day or night. From a lockout near Watauga Pavilion to a full-house rekey off Denton Highway, Amigo Locksmith brings the whole shop to you.",
+      "Watauga's tight-knit neighborhoods in northeast Tarrant County are well inside our coverage zone — 25–35 minute average arrival, day or night. From a lockout near Watauga Pavilion to a full-house rekey off Denton Highway, Dfwkeymaster brings the whole shop to you.",
       "Residents count on us for affordable rekeys and smart lock upgrades; local businesses along Rufe Snow and Watauga Road call us for lockouts, storefront locks and exit hardware — all quoted before we start.",
     ],
     neighborhoods: ["Indian Springs", "Watauga Heights", "Brewer area", "Denton Highway corridor", "Rufe Snow corridor"],
@@ -494,7 +494,7 @@ CITY_PAGES.push(
     blurb: "South Fort Worth growth corridor on I-35W.",
     tagline: "Crowley's booming — and so is our coverage there.",
     intro: [
-      "Crowley's growth along I-35W has made it one of our busiest south Fort Worth zones — 25–35 minute average arrival, 24/7. New subdivision rekeys, driveway key programming, lockouts near Crowley Park — Amigo Locksmith handles it all on-site.",
+      "Crowley's growth along I-35W has made it one of our busiest south Fort Worth zones — 25–35 minute average arrival, 24/7. New subdivision rekeys, driveway key programming, lockouts near Crowley Park — Dfwkeymaster handles it all on-site.",
       "Builders' keys, old keys, lost keys — we make them all stop mattering in one visit: whole-house rekeys, smart deadbolts, car key cutting and programming, and commercial service for the growing retail along Main Street.",
     ],
     neighborhoods: ["Crowley town center", "Crescent Springs", "Karon Hills", "Bria Estates", "Rendon Road corridor"],
