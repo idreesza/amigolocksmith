@@ -51,7 +51,7 @@ export default function StickyCall() {
       <div className="pop-in fixed inset-x-4 bottom-5 z-40 sm:hidden">
         <a
           href={SITE.phoneHref}
-          className="animate-breathe-glow flex items-center justify-center gap-2.5 rounded-2xl bg-amber-400 px-4 py-4 text-base font-extrabold text-slate-900"
+          className="animate-breathe-glow flex items-center justify-center gap-2.5 rounded-2xl bg-emerald-400 px-4 py-4 text-base font-extrabold text-slate-900"
           aria-label={`Emergency call — ${SITE.phone}`}
         >
           <span className="relative flex h-3 w-3">
@@ -66,7 +66,7 @@ export default function StickyCall() {
       {/* Desktop — compact pill */}
       <a
         href={SITE.phoneHref}
-        className="pop-in glow-amber fixed bottom-6 right-6 z-40 hidden items-center gap-3 rounded-2xl bg-amber-400 px-6 py-4 text-base font-extrabold text-slate-900 sm:flex"
+        className="pop-in glow-emerald fixed bottom-6 right-6 z-40 hidden items-center gap-3 rounded-2xl bg-emerald-400 px-6 py-4 text-base font-extrabold text-slate-900 sm:flex"
         aria-label={`Call Dfwkeymaster now at ${SITE.phone}`}
       >
         <span className="relative flex h-3 w-3">

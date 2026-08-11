@@ -37,7 +37,7 @@ export default function Home() {
   }, [location]);
 
   return (
-    <div className="min-h-screen bg-[#0A1628] text-slate-200 antialiased">
+    <div className="min-h-screen bg-[#04110D] text-slate-200 antialiased">
       <Navbar />
       <main>
         <Hero />

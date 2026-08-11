@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-4 lg:px-8">
         <div>
           <Link to="/" className="flex items-center gap-2.5">
-            <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-400 text-slate-900">
+            <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-400 text-slate-900">
               <KeyRound className="h-5 w-5" strokeWidth={2.5} />
             </span>
             <span className="font-display text-lg font-bold text-white">Dfwkeymaster</span>
@@ -20,10 +20,10 @@ export default function Footer() {
             {SITE.city}, {SITE.state}, serving the entire {SITE.region}.
           </p>
           <div className="mt-6 grid gap-2.5 text-sm">
-            <a href={SITE.phoneHref} className="flex items-center gap-2.5 font-bold text-amber-400 hover:text-amber-300">
+            <a href={SITE.phoneHref} className="flex items-center gap-2.5 font-bold text-emerald-400 hover:text-emerald-300">
               <Phone className="h-4 w-4" /> {SITE.phone}
             </a>
-            <a href={SITE.emailHref} className="flex items-center gap-2.5 text-slate-400 hover:text-amber-300">
+            <a href={SITE.emailHref} className="flex items-center gap-2.5 text-slate-400 hover:text-emerald-300">
               <Mail className="h-4 w-4" /> {SITE.email}
             </a>
           </div>
@@ -34,18 +34,18 @@ export default function Footer() {
           <ul className="mt-5 grid gap-2.5 text-sm text-slate-400">
             {SERVICES.map((s) => (
               <li key={s.title}>
-                <Link to="/#services" className="transition hover:text-amber-300">
+                <Link to="/#services" className="transition hover:text-emerald-300">
                   {s.title}
                 </Link>
               </li>
             ))}
             <li>
-              <Link to="/#services" className="transition hover:text-amber-300">
+              <Link to="/#services" className="transition hover:text-emerald-300">
                 24/7 Emergency Lockouts
               </Link>
             </li>
             <li>
-              <Link to="/#pricing" className="transition hover:text-amber-300">
+              <Link to="/#pricing" className="transition hover:text-emerald-300">
                 Pricing
               </Link>
             </li>
@@ -54,7 +54,7 @@ export default function Footer() {
           <ul className="mt-5 grid gap-2.5 text-sm text-slate-400">
             {NAV_LINKS.map((l) => (
               <li key={l.href}>
-                <Link to={`/${l.href}`} className="transition hover:text-amber-300">
+                <Link to={`/${l.href}`} className="transition hover:text-emerald-300">
                   {l.label}
                 </Link>
               </li>
@@ -69,7 +69,7 @@ export default function Footer() {
           <ul className="mt-5 grid grid-cols-2 gap-x-6 gap-y-2.5 text-sm text-slate-400 sm:grid-cols-3">
             {CITIES.map((c) => (
               <li key={c.slug}>
-                <Link to={`/locksmith/${c.slug}`} className="transition hover:text-amber-300">
+                <Link to={`/locksmith/${c.slug}`} className="transition hover:text-emerald-300">
                   Locksmith {c.name}, TX
                 </Link>
               </li>

@@ -11,7 +11,7 @@ export default function Reviews() {
           kicker="Reviews"
           title={
             <>
-              DFW Keeps Calling Us Back — <span className="text-gradient-amber">Here's Why</span>
+              DFW Keeps Calling Us Back — <span className="text-gradient-emerald">Here's Why</span>
             </>
           }
           sub="4.9-star average across 327+ verified customer reviews from Grand Prairie to Frisco."
@@ -20,10 +20,10 @@ export default function Reviews() {
           {REVIEWS.map((r, i) => (
             <Reveal key={r.name} delay={(i % 3) * 0.1}>
               <figure className="flex h-full flex-col rounded-3xl border border-slate-700/60 bg-slate-900/50 p-7">
-                <Quote className="h-6 w-6 text-amber-400/60" />
+                <Quote className="h-6 w-6 text-emerald-400/60" />
                 <div className="mt-3 flex gap-0.5" role="img" aria-label={`Rated ${r.rating} out of 5 stars`}>
                   {Array.from({ length: r.rating }).map((_, j) => (
-                    <Star key={j} className="h-4 w-4 fill-amber-400 text-amber-400" aria-hidden="true" />
+                    <Star key={j} className="h-4 w-4 fill-emerald-400 text-emerald-400" aria-hidden="true" />
                   ))}
                 </div>
                 <blockquote className="mt-4 flex-1 text-sm leading-relaxed text-slate-300">

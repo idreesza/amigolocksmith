@@ -12,7 +12,7 @@ export default function Areas() {
           kicker="Service areas"
           title={
             <>
-              Everywhere in <span className="text-gradient-amber">DFW</span>, Fast
+              Everywhere in <span className="text-gradient-emerald">DFW</span>, Fast
             </>
           }
           sub="Headquartered in Grand Prairie with mobile units staged across the metroplex. Tap your city for its dedicated page — local arrival times, neighborhoods we serve, pricing and FAQs."
@@ -22,19 +22,19 @@ export default function Areas() {
             <Reveal key={c.slug} delay={(i % 4) * 0.06}>
               <Link
                 to={`/locksmith/${c.slug}`}
-                className="group flex h-full flex-col rounded-2xl border border-slate-700/60 bg-slate-900/50 p-5 transition hover:-translate-y-1 hover:border-amber-400/50 hover:shadow-xl hover:shadow-amber-500/10"
+                className="group flex h-full flex-col rounded-2xl border border-slate-700/60 bg-slate-900/50 p-5 transition hover:-translate-y-1 hover:border-emerald-400/50 hover:shadow-xl hover:shadow-emerald-500/10"
               >
                 <div className="flex items-center justify-between">
-                  <MapPin className="h-5 w-5 text-amber-400" strokeWidth={2.2} />
-                  <span className="rounded-full bg-amber-400/10 px-2.5 py-1 text-xs font-bold text-amber-300">
+                  <MapPin className="h-5 w-5 text-emerald-400" strokeWidth={2.2} />
+                  <span className="rounded-full bg-emerald-400/10 px-2.5 py-1 text-xs font-bold text-emerald-300">
                     {c.eta}
                   </span>
                 </div>
-                <h3 className="mt-4 text-lg font-bold text-white transition group-hover:text-amber-300">
+                <h3 className="mt-4 text-lg font-bold text-white transition group-hover:text-emerald-300">
                   {c.name}
                 </h3>
                 <p className="mt-1.5 flex-1 text-xs leading-relaxed text-slate-400">{c.blurb}</p>
-                <span className="mt-3 text-xs font-semibold text-amber-300/80 transition group-hover:text-amber-300">
+                <span className="mt-3 text-xs font-semibold text-emerald-300/80 transition group-hover:text-emerald-300">
                   Locksmith in {c.name}, TX →
                 </span>
               </Link>
@@ -53,7 +53,7 @@ export default function Areas() {
             </div>
             <a
               href={SITE.phoneHref}
-              className="flex shrink-0 items-center gap-2 rounded-2xl bg-amber-400 px-6 py-3.5 font-bold text-slate-900 transition hover:bg-amber-300"
+              className="flex shrink-0 items-center gap-2 rounded-2xl bg-emerald-400 px-6 py-3.5 font-bold text-slate-900 transition hover:bg-emerald-300"
             >
               <Phone className="h-5 w-5" strokeWidth={2.5} />
               {SITE.phone}

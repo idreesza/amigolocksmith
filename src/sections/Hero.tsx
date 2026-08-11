@@ -26,22 +26,23 @@ export default function Hero() {
           className="h-full w-full object-cover object-right"
           fetchPriority="high"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628] via-[#0A1628]/72 to-[#0A1628]/35" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0A1628]/80 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#04110D] via-[#04110D]/72 to-[#04110D]/35" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#04110D]/80 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(16,185,129,0.14),transparent_55%)]" />
       </div>
 
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 pb-16 pt-36 sm:px-6 sm:pb-24 lg:px-8">
         <div className="enter-up max-w-3xl">
-          <div className="inline-flex items-center gap-2 rounded-full border border-amber-400/40 bg-amber-400/10 px-4 py-1.5 text-sm font-semibold text-amber-300">
+          <div className="inline-flex items-center gap-2 rounded-full border border-emerald-400/40 bg-emerald-400/10 px-4 py-1.5 text-sm font-semibold text-emerald-300">
             <span className="relative flex h-2.5 w-2.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-400 opacity-75" />
-              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-amber-400" />
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-400" />
             </span>
             Dispatching now across DFW
           </div>
 
           <h1 className="mt-6 text-4xl font-extrabold leading-[1.08] text-white sm:text-5xl lg:text-6xl">
-            Locked Out in <span className="text-gradient-amber">Grand Prairie?</span>
+            Locked Out in <span className="text-gradient-emerald">Grand Prairie?</span>
             <br />
             We're Already on Our Way.
           </h1>
@@ -51,14 +52,14 @@ export default function Hero() {
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
             <a
               href={SITE.phoneHref}
-              className="glow-amber group flex items-center justify-center gap-3 rounded-2xl bg-amber-400 px-8 py-4 text-lg font-bold text-slate-900 transition hover:bg-amber-300"
+              className="glow-emerald group flex items-center justify-center gap-3 rounded-2xl bg-emerald-400 px-8 py-4 text-lg font-bold text-slate-900 transition hover:bg-emerald-300"
             >
               <Phone className="h-5 w-5 transition group-hover:rotate-12" strokeWidth={2.5} />
               Call {SITE.phone}
             </a>
             <a
               href="#services"
-              className="flex items-center justify-center gap-2 rounded-2xl border border-slate-500/70 bg-white/5 px-8 py-4 text-lg font-semibold text-white backdrop-blur transition hover:border-amber-400/60 hover:text-amber-300"
+              className="flex items-center justify-center gap-2 rounded-2xl border border-slate-500/70 bg-white/5 px-8 py-4 text-lg font-semibold text-white backdrop-blur transition hover:border-emerald-400/60 hover:text-emerald-300"
             >
               Explore Services
             </a>
@@ -67,7 +68,7 @@ export default function Hero() {
           <div className="mt-6 flex items-center gap-2 text-sm text-slate-400">
             <span className="flex">
               {Array.from({ length: 5 }).map((_, i) => (
-                <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
+                <Star key={i} className="h-4 w-4 fill-emerald-400 text-emerald-400" />
               ))}
             </span>
             <span>
@@ -83,14 +84,14 @@ export default function Hero() {
               key={label}
               className="glass-panel flex items-center gap-3 rounded-2xl border border-slate-700/60 px-5 py-4"
             >
-              <Icon className="h-5 w-5 shrink-0 text-amber-400" strokeWidth={2.2} />
+              <Icon className="h-5 w-5 shrink-0 text-emerald-400" strokeWidth={2.2} />
               <span className="text-sm font-semibold text-slate-200">{label}</span>
             </div>
           ))}
         </div>
 
         <p className="enter-fade mt-10 flex items-center gap-2 text-sm font-medium text-slate-400">
-          <MapPin className="h-4 w-4 text-amber-400" />
+          <MapPin className="h-4 w-4 text-emerald-400" />
           Grand Prairie · Arlington · Irving · Dallas · Fort Worth · Mansfield · Duncanville ·
           Cedar Hill · Plano · Frisco
         </p>

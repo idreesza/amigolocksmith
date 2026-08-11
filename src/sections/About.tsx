@@ -18,7 +18,7 @@ export default function About() {
         <div className="grid items-center gap-14 lg:grid-cols-2">
           <Reveal>
             <div className="relative">
-              <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-tr from-amber-400/20 to-transparent blur-2xl" aria-hidden />
+              <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-tr from-emerald-400/20 to-transparent blur-2xl" aria-hidden />
               <img
                 src={asset("/images/about-technician.jpg")}
                 alt="Dfwkeymaster locksmith technician in front of a mobile service van in Grand Prairie, TX"
@@ -26,7 +26,7 @@ export default function About() {
                 className="relative w-full rounded-[2rem] border border-slate-700/60 object-cover shadow-2xl"
               />
               <div className="glass-panel absolute -bottom-6 left-6 right-6 flex items-center gap-4 rounded-2xl border border-slate-700/60 p-4 sm:left-8 sm:right-auto">
-                <ShieldCheck className="h-9 w-9 shrink-0 text-amber-400" strokeWidth={1.8} />
+                <ShieldCheck className="h-9 w-9 shrink-0 text-emerald-400" strokeWidth={1.8} />
                 <div>
                   <div className="text-sm font-bold text-white">Texas DPS Licensed</div>
                   <div className="text-xs text-slate-400">
@@ -40,11 +40,11 @@ export default function About() {
           <div>
             <Reveal>
               <h2 className="text-3xl font-bold text-white sm:text-4xl lg:leading-tight">
-                <span className="block text-sm font-semibold uppercase tracking-[0.25em] text-amber-400">
+                <span className="block text-sm font-semibold uppercase tracking-[0.25em] text-emerald-400">
                   About us
                 </span>
                 A Grand Prairie Company That Treats Your Emergency Like{" "}
-                <span className="text-gradient-amber">Our Own</span>
+                <span className="text-gradient-emerald">Our Own</span>
               </h2>
             </Reveal>
             <Reveal delay={0.1}>
@@ -68,7 +68,7 @@ export default function About() {
                     key={s.label}
                     className="rounded-2xl border border-slate-700/60 bg-slate-900/50 p-5"
                   >
-                    <div className="font-display text-3xl font-extrabold text-amber-400">
+                    <div className="font-display text-3xl font-extrabold text-emerald-400">
                       {s.value}
                     </div>
                     <div className="mt-1 text-xs font-medium text-slate-400">{s.label}</div>
@@ -79,10 +79,10 @@ export default function About() {
             <Reveal delay={0.3}>
               <div className="mt-8 flex flex-wrap items-center gap-6 text-sm text-slate-400">
                 <span className="inline-flex items-center gap-2">
-                  <Timer className="h-4 w-4 text-amber-400" /> {SITE.hours}
+                  <Timer className="h-4 w-4 text-emerald-400" /> {SITE.hours}
                 </span>
                 <span className="inline-flex items-center gap-2">
-                  <HeartHandshake className="h-4 w-4 text-amber-400" /> 90-day labor warranty
+                  <HeartHandshake className="h-4 w-4 text-emerald-400" /> 90-day labor warranty
                 </span>
               </div>
             </Reveal>

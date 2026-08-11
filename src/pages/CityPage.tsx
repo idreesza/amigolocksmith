@@ -172,44 +172,44 @@ export default function CityPage() {
   const nearbyCities = city.nearby.map((s) => getCity(s)).filter(Boolean);
 
   return (
-    <div className="min-h-screen bg-[#0A1628] text-slate-200 antialiased">
+    <div className="min-h-screen bg-[#04110D] text-slate-200 antialiased">
       <CitySeo slug={city.slug} name={city.name} eta={city.eta} localQ={city.localQ} />
       <Navbar />
 
       <main>
         {/* Hero */}
         <section className="relative overflow-hidden pb-16 pt-32 sm:pb-20 sm:pt-40">
-          <div className="absolute inset-0 bg-grid-navy opacity-60" aria-hidden />
-          <div className="absolute -left-32 top-24 h-96 w-96 rounded-full bg-amber-400/10 blur-3xl" aria-hidden />
+          <div className="absolute inset-0 bg-grid-vault opacity-60" aria-hidden />
+          <div className="absolute -left-32 top-24 h-96 w-96 rounded-full bg-emerald-400/10 blur-3xl" aria-hidden />
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <nav className="text-xs font-medium text-slate-500" aria-label="Breadcrumb">
-              <Link to="/" className="transition hover:text-amber-400">Home</Link>
+              <Link to="/" className="transition hover:text-emerald-400">Home</Link>
               <span className="mx-2">/</span>
-              <Link to="/#areas" className="transition hover:text-amber-400">Service Areas</Link>
+              <Link to="/#areas" className="transition hover:text-emerald-400">Service Areas</Link>
               <span className="mx-2">/</span>
               <span className="text-slate-300">{city.name}, TX</span>
             </nav>
 
             <Reveal>
-              <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-amber-400/40 bg-amber-400/10 px-4 py-1.5 text-sm font-semibold text-amber-300">
+              <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-emerald-400/40 bg-emerald-400/10 px-4 py-1.5 text-sm font-semibold text-emerald-300">
                 <Clock className="h-4 w-4" />
                 Average arrival in {city.name}: {city.eta}
               </div>
               <h1 className="mt-5 max-w-3xl text-4xl font-extrabold leading-[1.1] text-white sm:text-5xl">
-                24/7 Locksmith in <span className="text-gradient-amber">{city.name}, TX</span>
+                24/7 Locksmith in <span className="text-gradient-emerald">{city.name}, TX</span>
               </h1>
               <p className="mt-4 max-w-2xl text-lg text-slate-400">{city.tagline}</p>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <a
                   href={SITE.phoneHref}
-                  className="glow-amber flex items-center justify-center gap-3 rounded-2xl bg-amber-400 px-8 py-4 text-lg font-bold text-slate-900 transition hover:bg-amber-300"
+                  className="glow-emerald flex items-center justify-center gap-3 rounded-2xl bg-emerald-400 px-8 py-4 text-lg font-bold text-slate-900 transition hover:bg-emerald-300"
                 >
                   <Phone className="h-5 w-5" strokeWidth={2.5} />
                   Call {SITE.phone}
                 </a>
                 <Link
                   to="/#services"
-                  className="flex items-center justify-center gap-2 rounded-2xl border border-slate-500/70 bg-white/5 px-8 py-4 text-lg font-semibold text-white transition hover:border-amber-400/60 hover:text-amber-300"
+                  className="flex items-center justify-center gap-2 rounded-2xl border border-slate-500/70 bg-white/5 px-8 py-4 text-lg font-semibold text-white transition hover:border-emerald-400/60 hover:text-emerald-300"
                 >
                   View All Services
                 </Link>
@@ -230,10 +230,10 @@ export default function CityPage() {
               ))}
               <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-slate-400">
                 <span className="inline-flex items-center gap-2">
-                  <ShieldCheck className="h-4 w-4 text-amber-400" /> TX DPS licensed & insured
+                  <ShieldCheck className="h-4 w-4 text-emerald-400" /> TX DPS licensed & insured
                 </span>
                 <span className="inline-flex items-center gap-2">
-                  <Clock className="h-4 w-4 text-amber-400" /> Open 24/7 — holidays included
+                  <Clock className="h-4 w-4 text-emerald-400" /> Open 24/7 — holidays included
                 </span>
               </div>
             </Reveal>
@@ -241,19 +241,19 @@ export default function CityPage() {
             <Reveal delay={0.12} className="lg:col-span-2">
               <div className="rounded-3xl border border-slate-700/60 bg-slate-900/60 p-7">
                 <h3 className="flex items-center gap-2 text-lg font-bold text-white">
-                  <MapPin className="h-5 w-5 text-amber-400" />
+                  <MapPin className="h-5 w-5 text-emerald-400" />
                   Neighborhoods we serve in {city.name}
                 </h3>
                 <ul className="mt-4 grid gap-2 text-sm text-slate-300">
                   {city.neighborhoods.map((n) => (
                     <li key={n} className="flex items-start gap-2">
-                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-amber-400" strokeWidth={3} />
+                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" strokeWidth={3} />
                       {n}
                     </li>
                   ))}
                 </ul>
                 <h3 className="mt-7 flex items-center gap-2 text-lg font-bold text-white">
-                  <Landmark className="h-5 w-5 text-amber-400" />
+                  <Landmark className="h-5 w-5 text-emerald-400" />
                   We know {city.name}
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-slate-400">
@@ -265,7 +265,7 @@ export default function CityPage() {
         </section>
 
         {/* Services */}
-        <section className="bg-[#0A1628] py-16">
+        <section className="bg-[#04110D] py-16">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <Reveal>
               <h2 className="text-center text-2xl font-bold text-white sm:text-3xl">
@@ -279,7 +279,7 @@ export default function CityPage() {
             <div className="mt-12 grid gap-8 lg:grid-cols-3">
               {SERVICES.map((svc, i) => (
                 <Reveal key={svc.title} delay={i * 0.1}>
-                  <article className="flex h-full flex-col rounded-3xl border border-slate-700/60 bg-slate-900/60 p-7 transition hover:border-amber-400/40">
+                  <article className="flex h-full flex-col rounded-3xl border border-slate-700/60 bg-slate-900/60 p-7 transition hover:border-emerald-400/40">
                     <h3 className="text-xl font-bold text-white">
                       {svc.title} — {city.name}
                     </h3>
@@ -287,14 +287,14 @@ export default function CityPage() {
                     <ul className="mt-4 grid gap-2">
                       {svc.items.slice(0, 5).map((item) => (
                         <li key={item} className="flex items-start gap-2.5 text-sm text-slate-300">
-                          <Check className="mt-0.5 h-4 w-4 shrink-0 text-amber-400" strokeWidth={3} />
+                          <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" strokeWidth={3} />
                           {item}
                         </li>
                       ))}
                     </ul>
                     <a
                       href={SITE.phoneHref}
-                      className="mt-auto pt-5 text-sm font-bold text-amber-300 transition hover:text-amber-200"
+                      className="mt-auto pt-5 text-sm font-bold text-emerald-300 transition hover:text-emerald-200"
                     >
                       Call {SITE.phone} →
                     </a>
@@ -327,7 +327,7 @@ export default function CityPage() {
                         className={`border-b border-slate-800 ${i % 2 ? "bg-slate-900/30" : ""}`}
                       >
                         <td className="px-6 py-3 font-medium text-slate-200">{row.service}</td>
-                        <td className="px-6 py-3 text-right font-bold text-amber-300">
+                        <td className="px-6 py-3 text-right font-bold text-emerald-300">
                           {row.quote ? "Quote on site" : `Starting at $${row.start}`}
                         </td>
                       </tr>
@@ -337,7 +337,7 @@ export default function CityPage() {
               </div>
             </Reveal>
             <Reveal className="mt-6 text-center">
-              <Link to="/#pricing" className="text-sm font-semibold text-amber-300 hover:text-amber-200">
+              <Link to="/#pricing" className="text-sm font-semibold text-emerald-300 hover:text-emerald-200">
                 See the full price list →
               </Link>
             </Reveal>
@@ -345,7 +345,7 @@ export default function CityPage() {
         </section>
 
         {/* FAQs */}
-        <section className="bg-[#0A1628] py-16">
+        <section className="bg-[#04110D] py-16">
           <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
             <Reveal>
               <h2 className="text-center text-2xl font-bold text-white sm:text-3xl">
@@ -370,7 +370,7 @@ export default function CityPage() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <Reveal>
               <h2 className="flex items-center gap-2 text-xl font-bold text-white">
-                <Navigation className="h-5 w-5 text-amber-400" />
+                <Navigation className="h-5 w-5 text-emerald-400" />
                 Also serving near {city.name}
               </h2>
               <div className="mt-5 flex flex-wrap gap-2.5">
@@ -380,7 +380,7 @@ export default function CityPage() {
                       <Link
                         key={c.slug}
                         to={`/locksmith/${c.slug}`}
-                        className="rounded-full border border-slate-700 bg-slate-900/60 px-4 py-2 text-sm font-medium text-slate-300 transition hover:border-amber-400/60 hover:text-amber-300"
+                        className="rounded-full border border-slate-700 bg-slate-900/60 px-4 py-2 text-sm font-medium text-slate-300 transition hover:border-emerald-400/60 hover:text-emerald-300"
                       >
                         Locksmith {c.name}, TX
                       </Link>
@@ -388,7 +388,7 @@ export default function CityPage() {
                 )}
                 <Link
                   to="/#areas"
-                  className="rounded-full border border-amber-400/40 bg-amber-400/10 px-4 py-2 text-sm font-bold text-amber-300 transition hover:bg-amber-400 hover:text-slate-900"
+                  className="rounded-full border border-emerald-400/40 bg-emerald-400/10 px-4 py-2 text-sm font-bold text-emerald-300 transition hover:bg-emerald-400 hover:text-slate-900"
                 >
                   All 27 service areas →
                 </Link>
@@ -396,7 +396,7 @@ export default function CityPage() {
             </Reveal>
 
             <Reveal delay={0.1} className="mt-12">
-              <div className="glass-panel flex flex-col items-center justify-between gap-6 rounded-3xl border border-amber-400/30 p-8 text-center sm:flex-row sm:text-left">
+              <div className="glass-panel flex flex-col items-center justify-between gap-6 rounded-3xl border border-emerald-400/30 p-8 text-center sm:flex-row sm:text-left">
                 <div>
                   <h3 className="text-2xl font-bold text-white">
                     Locked out in {city.name} right now?
@@ -407,7 +407,7 @@ export default function CityPage() {
                 </div>
                 <a
                   href={SITE.phoneHref}
-                  className="glow-amber flex shrink-0 items-center gap-3 rounded-2xl bg-amber-400 px-8 py-4 text-lg font-bold text-slate-900 transition hover:bg-amber-300"
+                  className="glow-emerald flex shrink-0 items-center gap-3 rounded-2xl bg-emerald-400 px-8 py-4 text-lg font-bold text-slate-900 transition hover:bg-emerald-300"
                 >
                   <Phone className="h-5 w-5" strokeWidth={2.5} />
                   {SITE.phone}

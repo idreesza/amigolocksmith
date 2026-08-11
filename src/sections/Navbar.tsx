@@ -28,12 +28,12 @@ export default function Navbar() {
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
         <Link to="/" className="flex items-center gap-2.5">
-          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-400 text-slate-900 shadow-lg shadow-amber-500/30">
+          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-400 text-slate-900 shadow-lg shadow-emerald-500/30">
             <KeyRound className="h-5 w-5" strokeWidth={2.5} />
           </span>
           <span className="leading-tight">
             <span className="block font-display text-lg font-bold text-white">Dfwkeymaster</span>
-            <span className="block text-[11px] font-medium uppercase tracking-widest text-amber-400">
+            <span className="block text-[11px] font-medium uppercase tracking-widest text-emerald-400">
               24/7 Mobile Locksmith
             </span>
           </span>
@@ -44,7 +44,7 @@ export default function Navbar() {
             <Link
               key={l.href}
               to={navTo(l.href)}
-              className="text-sm font-medium text-slate-300 transition hover:text-amber-400"
+              className="text-sm font-medium text-slate-300 transition hover:text-emerald-400"
             >
               {l.label}
             </Link>
@@ -54,12 +54,12 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           <a
             href={SITE.phoneHref}
-            className="hidden items-center gap-2 rounded-full bg-amber-400 px-5 py-2.5 text-sm font-bold text-slate-900 shadow-lg shadow-amber-500/30 transition hover:bg-amber-300 sm:flex"
+            className="hidden items-center gap-2 rounded-full bg-emerald-400 px-5 py-2.5 text-sm font-bold text-slate-900 shadow-lg shadow-emerald-500/30 transition hover:bg-emerald-300 sm:flex"
           >
             <Phone className="h-4 w-4" strokeWidth={2.5} />
             {SITE.phone}
           </a>
-          <a href={SITE.phoneHref} className="flex h-10 w-10 items-center justify-center rounded-full bg-amber-400 text-slate-900 sm:hidden" aria-label="Call now">
+          <a href={SITE.phoneHref} className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-400 text-slate-900 sm:hidden" aria-label="Call now">
             <Phone className="h-5 w-5" strokeWidth={2.5} />
           </a>
           <button
@@ -80,7 +80,7 @@ export default function Navbar() {
                 key={l.href}
                 to={navTo(l.href)}
                 onClick={() => setOpen(false)}
-                className="rounded-lg px-3 py-2.5 text-sm font-medium text-slate-200 transition hover:bg-slate-800 hover:text-amber-400"
+                className="rounded-lg px-3 py-2.5 text-sm font-medium text-slate-200 transition hover:bg-slate-800 hover:text-emerald-400"
               >
                 {l.label}
               </Link>

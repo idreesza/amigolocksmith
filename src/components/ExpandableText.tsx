@@ -38,7 +38,7 @@ export default function ExpandableText({ text }: { text: string }) {
           type="button"
           onClick={() => setOpen(!open)}
           aria-expanded={open}
-          className="mt-2 inline-flex min-h-[44px] items-center gap-1.5 rounded-lg pr-3 text-sm font-semibold text-amber-400 transition hover:text-amber-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400/60"
+          className="mt-2 inline-flex min-h-[44px] items-center gap-1.5 rounded-lg pr-3 text-sm font-semibold text-emerald-400 transition hover:text-emerald-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/60"
         >
           {open ? "Read less" : "Read more"}
           <ChevronDown

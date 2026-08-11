@@ -34,14 +34,14 @@ const STEPS = [
 
 export default function Process() {
   return (
-    <section className="relative overflow-hidden bg-[#0A1628] py-24">
-      <div className="absolute inset-0 bg-grid-navy opacity-50" aria-hidden />
+    <section className="relative overflow-hidden bg-[#04110D] py-24">
+      <div className="absolute inset-0 bg-grid-vault opacity-50" aria-hidden />
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           kicker="How it works"
           title={
             <>
-              From Locked Out to Back In — <span className="text-gradient-amber">in 4 Steps</span>
+              From Locked Out to Back In — <span className="text-gradient-emerald">in 4 Steps</span>
             </>
           }
         />
@@ -50,15 +50,15 @@ export default function Process() {
             <Reveal key={s.step} delay={i * 0.12} className="relative">
               <div className="hidden lg:block">
                 {i < STEPS.length - 1 && (
-                  <div className="absolute left-[calc(50%+44px)] top-8 h-px w-[calc(100%-64px)] bg-gradient-to-r from-amber-400/50 to-slate-700" aria-hidden />
+                  <div className="absolute left-[calc(50%+44px)] top-8 h-px w-[calc(100%-64px)] bg-gradient-to-r from-emerald-400/50 to-slate-700" aria-hidden />
                 )}
               </div>
               <div className="flex flex-col items-center text-center">
                 <div className="relative">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl border border-amber-400/40 bg-amber-400/10 text-amber-400">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl border border-emerald-400/40 bg-emerald-400/10 text-emerald-400">
                     <s.icon className="h-7 w-7" strokeWidth={2} />
                   </div>
-                  <span className="absolute -right-2 -top-2 rounded-full bg-amber-400 px-2 py-0.5 text-[11px] font-extrabold text-slate-900">
+                  <span className="absolute -right-2 -top-2 rounded-full bg-emerald-400 px-2 py-0.5 text-[11px] font-extrabold text-slate-900">
                     {s.step}
                   </span>
                 </div>
