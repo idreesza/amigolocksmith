@@ -1,7 +1,8 @@
 name: Build & Deploy to GitHub Pages
 
-# Every push to main: typecheck + Vite build -> static prerender of all 28
-# routes (home + 27 city pages) -> deploy the prebuilt static site to GitHub Pages.
+# Every push to main: typecheck + Vite build -> static prerender of all 79
+# routes (home + 27 city pages + blog index + 50 blog posts) -> deploy the
+# prebuilt static site to GitHub Pages.
 
 on:
   push:
@@ -48,6 +49,11 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
+      - name: Regenerate FAQ schema + sitemap from source data
+        run: |
+          python3 scripts/gen_faq_schema.py
+          python3 scripts/gen_sitemap.py
 
       - name: Install Playwright + Chromium (for pre-rendering)
         run: |
