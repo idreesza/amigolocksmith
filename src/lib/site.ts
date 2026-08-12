@@ -194,6 +194,66 @@ export const FAQS = [
     q: "Do you charge extra for nights, weekends or emergencies?",
     a: "After-hours emergency service may carry a modest dispatch fee, but we quote the complete price — service call plus labor plus parts — before we start. The price we quote is the price you pay. No bait-and-switch, ever.",
   },
+  {
+    q: "What's the full price breakdown for each service?",
+    a: "Every job starts with a flat dispatch/service-call fee, then labor and any parts. Car lockouts start at $65, house lockouts at $75, rekeys at $25 per cylinder, transponder cutting and programming at $145, and smart lock installation at $120 plus the hardware. You get one itemized number before we touch anything — and that's the number on the invoice.",
+  },
+  {
+    q: "Is it cheaper to use a mobile locksmith than a car dealership for key fobs?",
+    a: "Almost always, yes — typically 40–60% less. Dealerships bundle key fobs with towing, shop fees and multi-day waits; we cut and program the same OEM-quality fob in your driveway in one visit. For most makes we save customers $100–$250 compared to the dealer quote.",
+  },
+  {
+    q: "How do master key systems work for small businesses, and what do they cost?",
+    a: "A master key system re-pins your locks into a hierarchy — employees open only their areas, managers open more, and your master key opens everything. We design the levels around your floor plan and staff roles. A basic small-office system starts around $25–$45 per cylinder plus setup, and we map it all out before quoting.",
+  },
+  {
+    q: "How often should a business change or re-key its master key system?",
+    a: "Re-key any time a key-holder leaves, a key goes missing, or you suspect a copy was made — don't wait. As a routine, most DFW small businesses re-key every 1–2 years or after any turnover in a master-holding role. Because rekeying re-pins rather than replaces, staying current is inexpensive.",
+  },
+  {
+    q: "What's involved in smart lock installation, and which brands are compatible?",
+    a: "We fit the lock to your door, connect it to your Wi-Fi or hub, pair your phones, and walk you through the app and access codes. We install and configure Schlage, Kwikset, Yale, August, and most major brands, and we'll tell you upfront whether your existing door and deadbolt prep are compatible.",
+  },
+  {
+    q: "Is a smart lock a good DIY project, or should it be professionally installed?",
+    a: "Many smart locks are DIY-friendly if your door is standard and aligned, but misaligned strikes, older doors, and hub/network setup trip people up constantly. A professional install guarantees the bolt throws cleanly, the auto-lock actually engages, and your codes and app are configured securely — usually in under an hour.",
+  },
+  {
+    q: "How can I tell a legitimate locksmith from a scam?",
+    a: "Red flags: unmarked vehicles, no company uniform or ID, refusing to give a written quote, and a '$19 service call' that balloons into hundreds on-site. A legitimate locksmith is licensed with the Texas DPS, arrives in a branded vehicle, shows ID and a license number, and quotes the full price before starting. We're happy to show all of it.",
+  },
+  {
+    q: "What should I do the moment I realize I'm locked out of my car?",
+    a: "First, check every door and the trunk — one is often unlocked. If a child or pet is inside, call 911 immediately, then us. Otherwise move somewhere safe, note your exact location, and call (682) 666-2966. Don't pry the door or use a coat hanger — modern weatherstripping and linkages damage easily and cost far more than a clean unlock.",
+  },
+  {
+    q: "Can a broken key stuck in a lock be extracted without replacing the whole lock?",
+    a: "Usually, yes. We use spiral and hooked extractors to pull the broken blade out without harming the cylinder, then cut you a fresh key on the spot. Replacement is only needed if the lock was already worn or damaged — and we'll tell you honestly before doing anything more.",
+  },
+  {
+    q: "What are the warning signs my ignition cylinder is failing vs. just a worn key?",
+    a: "A worn key struggles in one lock but works elsewhere; a failing ignition sticks, won't turn, or needs jiggling with any key, and may leave you unable to remove the key. If the steering wheel locks up or the key won't rotate past ACC, that's the cylinder. We diagnose it on-site and repair or replace the cylinder — often without a dealer trip.",
+  },
+  {
+    q: "Can you open a safe if I lost or forgot the combination, and is it damage-free?",
+    a: "In most cases we open safes non-destructively using manipulation and electronic diagnostics, so the safe stays fully usable. Drilling is a last resort and always discussed first. After opening we can reset the combination or replace the lock, and we verify ownership before any safe work.",
+  },
+  {
+    q: "Do you handle motorcycle, RV, and trunk lockouts, and is the equipment different?",
+    a: "Yes — motorcycles, RVs, and trunks all use different keyways and locking mechanisms than standard car doors, and we carry the specific blanks, picks, and decoders for them. Motorcycle gas caps and RV compartment locks in particular need specialized tools, which is why not every locksmith takes these calls. We do.",
+  },
+  {
+    q: "What payment methods do you accept?",
+    a: "We accept all major credit and debit cards, cash, Apple Pay, Google Pay, and Zelle. Payment is collected on completion, and you always receive a written, itemized receipt. For commercial accounts we can arrange invoicing.",
+  },
+  {
+    q: "What information should I have ready when I call?",
+    a: "Have your exact address or location, the vehicle year/make/model (or the door/lock type for a property), and a callback number. For your security we'll verify ownership — a registration, title, ID matching the address, or proof of residence. The more you can tell us upfront, the faster we dispatch the right technician and equipment.",
+  },
+  {
+    q: "Do you provide a free upfront quote before the technician arrives, and do you guarantee your work?",
+    a: "Yes to both. We give you a clear, no-obligation quote over the phone based on what you describe, and confirm the final price on-site before starting. All labor and parts are backed by a workmanship guarantee — if something we installed or serviced fails, we come back and make it right.",
+  },
 ];
 
 export const NAV_LINKS = [

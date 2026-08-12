@@ -6,7 +6,7 @@ import { CITIES, NAV_LINKS, SERVICES, SITE } from "@/lib/site";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-slate-800 bg-[#070F1E]">
+    <footer className="border-t border-slate-800 bg-[#030C0A]">
       <div className="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-4 lg:px-8">
         <div>
           <Link to="/" className="flex items-center gap-2.5">
@@ -59,6 +59,11 @@ export default function Footer() {
                 </Link>
               </li>
             ))}
+            <li>
+              <Link to="/blog" className="transition hover:text-emerald-300">
+                Blog
+              </Link>
+            </li>
           </ul>
         </div>
 

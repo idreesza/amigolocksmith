@@ -49,6 +49,12 @@ export default function Navbar() {
               {l.label}
             </Link>
           ))}
+          <Link
+            to="/blog"
+            className={`text-sm font-medium transition hover:text-emerald-400 ${pathname.startsWith("/blog") ? "text-emerald-400" : "text-slate-300"}`}
+          >
+            Blog
+          </Link>
         </div>
 
         <div className="flex items-center gap-3">
@@ -85,6 +91,13 @@ export default function Navbar() {
                 {l.label}
               </Link>
             ))}
+            <Link
+              to="/blog"
+              onClick={() => setOpen(false)}
+              className="rounded-lg px-3 py-2.5 text-sm font-medium text-slate-200 transition hover:bg-slate-800 hover:text-emerald-400"
+            >
+              Blog
+            </Link>
           </div>
         </div>
       )}

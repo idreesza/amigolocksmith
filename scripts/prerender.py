@@ -26,6 +26,10 @@ def get_slugs():
     src = (Path(__file__).resolve().parent.parent / "src/data/cities.ts").read_text()
     return re.findall(r'slug: "([a-z-]+)"', src)
 
+def get_post_slugs():
+    src = (Path(__file__).resolve().parent.parent / "src/data/blog.ts").read_text()
+    return re.findall(r'slug: "([a-z0-9-]+)"', src)
+
 def wait_port(port, timeout=10):
     t0 = time.time()
     while time.time() - t0 < timeout:
@@ -53,7 +57,8 @@ def find_chromium():
 
 def main():
     slugs = get_slugs()
-    routes = ["/"] + [f"/locksmith/{s}" for s in slugs]
+    post_slugs = get_post_slugs()
+    routes = ["/"] + [f"/locksmith/{s}" for s in slugs] + ["/blog"] + [f"/blog/{s}" for s in post_slugs]
     print(f"Prerendering {len(routes)} routes...")
 
     # when base is a subpath, copy dist into a temp dir under <base>/ so
@@ -91,7 +96,7 @@ def main():
                     )
                 # wait until the route's React page has actually rendered
                 page.wait_for_function(
-                    "r => r === '/' ? !!document.querySelector('#top') : document.querySelectorAll('h1').length === 1 && document.title.includes('Locksmith')",
+                    "r => r === '/' ? !!document.querySelector('#top') : document.querySelectorAll('h1').length >= 1 && document.title.length > 10",
                     arg=route,
                     timeout=10000,
                 )
@@ -102,7 +107,17 @@ def main():
                 ld_count = page.eval_on_selector_all('script[type="application/ld+json"]', "e => e.length")
                 if route == "/" and "Grand Prairie TX | Dfwkeymaster" not in title:
                     errors.append(f"{route}: unexpected title '{title}'")
-                if route != "/":
+                elif route == "/blog":
+                    if "Blog" not in title:
+                        errors.append(f"{route}: unexpected blog-index title '{title}'")
+                    if not canon.endswith("/blog"):
+                        errors.append(f"{route}: canonical mismatch '{canon}'")
+                elif route.startswith("/blog/"):
+                    if not canon.endswith(route):
+                        errors.append(f"{route}: canonical mismatch '{canon}'")
+                    if "Dfwkeymaster" not in title:
+                        errors.append(f"{route}: title missing brand ('{title}')")
+                elif route != "/":
                     # compare against expected city name from the slug (handles DeSoto etc.)
                     slug = route.rsplit("/", 1)[-1]
                     src = (Path(__file__).resolve().parent.parent / "src/data/cities.ts").read_text()
