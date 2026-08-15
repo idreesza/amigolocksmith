@@ -4,7 +4,7 @@ import { Menu } from "lucide-react"
 import { Phone } from "lucide-react"
 import { X } from "lucide-react"
 import { KeyRound } from "lucide-react";
-import { NAV_LINKS, SITE } from "@/lib/site";
+import { NAV_LINKS, SITE, asset } from "@/lib/site";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -28,11 +28,15 @@ export default function Navbar() {
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
         <Link to="/" className="flex items-center gap-2.5">
-          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-400 text-slate-900 shadow-lg shadow-emerald-500/30">
+          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-400 text-slate-900 shadow-lg shadow-emerald-500/30">
             <KeyRound className="h-5 w-5" strokeWidth={2.5} />
           </span>
           <span className="leading-tight">
-            <span className="block font-display text-lg font-bold text-white">Dfwkeymaster</span>
+            <img
+              src={asset("/images/logo.png")}
+              alt="DFW Key Master"
+              className="block h-7 w-auto"
+            />
             <span className="block text-[11px] font-medium uppercase tracking-widest text-emerald-400">
               24/7 Mobile Locksmith
             </span>
