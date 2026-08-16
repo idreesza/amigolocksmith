@@ -46,18 +46,18 @@ def add(slug, title, meta_title, meta_desc, date, mins, cat, img_alt, intro, sec
   }},""")
 
 # ---------- 27 CITY POSTS ----------
-CITY_CTA = "Need a locksmith in {n} right now? Call Dfwkeymaster at (682) 666-2966 — we're mobile, 24/7, and average {e} arrival across {n}."
+CITY_CTA = "Need a locksmith in {n} right now? Call DFWKeyMaster at (682) 666-2966 — we're mobile, 24/7, and average {e} arrival across {n}."
 for slug, name, eta in get_cities():
     add(
         f"locksmith-{slug}",
         f"Locksmith in {name}, TX: Costs, Response Times & Local FAQs",
-        f"Locksmith in {name} TX — Costs, Response Times & FAQs | Dfwkeymaster",
-        f"Looking for a locksmith in {name}, TX? See real costs, {eta} average response times, and answers to the most common {name} locksmith questions from Dfwkeymaster's 24/7 mobile team.",
+        f"Locksmith in {name} TX — Costs, Response Times & FAQs | DFWKeyMaster",
+        f"Looking for a locksmith in {name}, TX? See real costs, {eta} average response times, and answers to the most common {name} locksmith questions from DFWKeyMaster's 24/7 mobile team.",
         "2026-01-15", 8, "Service Areas",
-        f"Dfwkeymaster mobile locksmith van serving {name}, Texas",
+        f"DFWKeyMaster mobile locksmith van serving {name}, Texas",
         [
             f"If you're searching for a locksmith in {name}, TX, you usually need one of two things: someone to get to you fast, or a straight answer on what it will cost. This local guide covers both — real response times, honest price ranges, and the questions {name} residents and business owners ask us most.",
-            f"Dfwkeymaster is a fully mobile locksmith serving {name} around the clock. Because our vans stage across the metroplex rather than behind a single storefront, we reach most {name} addresses in {eta} on average — day, night, weekends and holidays.",
+            f"DFWKeyMaster is a fully mobile locksmith serving {name} around the clock. Because our vans stage across the metroplex rather than behind a single storefront, we reach most {name} addresses in {eta} on average — day, night, weekends and holidays.",
         ],
         [
             (f"How much does a locksmith cost in {name}?", [
@@ -73,7 +73,7 @@ for slug, name, eta in get_cities():
                 "Because each van carries key-cutting machines, OEM-grade programmers and a full hardware inventory, we finish almost every job on the spot — no towing and no second appointment.",
             ]),
             (f"{name} locksmith FAQs", [
-                f"Do you come to me, or do I come to you? We come to you — Dfwkeymaster is fully mobile, so whether you're at home, at work or in a {name} parking lot, the locksmith shop arrives at your location.",
+                f"Do you come to me, or do I come to you? We come to you — DFWKeyMaster is fully mobile, so whether you're at home, at work or in a {name} parking lot, the locksmith shop arrives at your location.",
                 "Are you licensed and insured? Yes — our technicians are licensed with the Texas Department of Public Safety, background-checked and fully insured, and we're happy to show credentials on arrival.",
                 "Can you make a key if I've lost all of mine? In most cases, yes — we originate new keys from the vehicle's lock or VIN and program them on-site.",
             ]),
@@ -91,7 +91,7 @@ Path("/tmp/blog_entries.txt").write_text("\n".join(entries))
 EV = []
 
 def ev(slug, title, kw_cat, img_alt, intro, sections, cta_href, cta_label, cta_text, related, mins=9):
-    meta_title = (title if len(title) <= 58 else title.split(":")[0]) + " | Dfwkeymaster"
+    meta_title = (title if len(title) <= 58 else title.split(":")[0]) + " | DFWKeyMaster"
     meta_desc = intro[0][:150].rstrip() + ("…" if len(intro[0]) > 150 else "")
     add(slug, title, meta_title, meta_desc, "2026-02-01", mins, kw_cat.title() if kw_cat != "areas" else "Service Areas",
         img_alt, intro, sections, cta_href, cta_label, cta_text, related)
@@ -101,7 +101,7 @@ ev("car-key-replacement-cost-guide-2026",
    "automotive",
    "Locksmith cutting a replacement car key on a mobile key-cutting machine",
    ["How much should a replacement car key actually cost in 2026? The honest answer depends on your key type, your vehicle, and — most of all — who you call. This guide breaks down real pricing for every kind of car key, from basic metal blades to push-to-start smart fobs, so you can spot a fair quote and avoid overpaying.",
-    "At Dfwkeymaster we cut and program car keys on-site across DFW every day. Below is exactly what we charge and what dealers charge, so you can compare before you commit."],
+    "At DFWKeyMaster we cut and program car keys on-site across DFW every day. Below is exactly what we charge and what dealers charge, so you can compare before you commit."],
    [("Car key replacement costs by type (2026)", [
        "Traditional metal keys (no chip) are the cheapest — typically $40–$80 cut on the spot. Transponder keys with a chip run $145–$250 cut and programmed. Remote head keys and key fobs usually land between $180 and $350. Push-to-start smart proximity fobs are the most expensive, often $250–$500 depending on the make.",
        "Dealer pricing sits 40–60% higher for the same key, and that's before towing and shop fees. A mobile locksmith brings the same OEM-grade equipment to your driveway, which is why so many drivers skip the dealership entirely."]),
@@ -112,7 +112,7 @@ ev("car-key-replacement-cost-guide-2026",
        "Have your vehicle's year, make and model ready, plus your VIN if you have it. Tell us whether you have any working key. With that, we can quote a firm price over the phone — and that number won't change when we arrive.",
        "If a locksmith won't give you a real number until they 'see the car,' be cautious. Legitimate mobile locksmiths can price almost any car key from the year/make/model alone."])],
    "/#services", "our automotive locksmith services",
-   "Need a car key replaced today? Dfwkeymaster cuts and programs keys on-site across DFW — usually 40–60% less than the dealer. Call (682) 666-2966 for an exact quote.",
+   "Need a car key replaced today? DFWKeyMaster cuts and programs keys on-site across DFW — usually 40–60% less than the dealer. Call (682) 666-2966 for an exact quote.",
    ["key-fob-programming-explained", "dealer-vs-mobile-locksmith-car-keys", "transponder-vs-smart-vs-traditional-keys"])
 
 ev("key-fob-programming-explained",
@@ -130,7 +130,7 @@ ev("key-fob-programming-explained",
        "Expect to pay $145–$350 for a fob cut and programmed by a mobile locksmith, depending on the vehicle. Dealerships routinely quote $300–$600 for the same job, plus a tow if you have no working key.",
        "We always quote the full price — fob, cutting and programming — before we start, so you can compare it against a dealer estimate with confidence."])],
    "/#services", "our automotive locksmith services",
-   "Need a key fob programmed? Dfwkeymaster programs fobs on-site across DFW for most makes. Call (682) 666-2966.",
+   "Need a key fob programmed? DFWKeyMaster programs fobs on-site across DFW for most makes. Call (682) 666-2966.",
    ["car-key-replacement-cost-guide-2026", "push-to-start-key-fob-guide", "transponder-vs-smart-vs-traditional-keys"])
 
 ev("transponder-vs-smart-vs-traditional-keys",
@@ -184,7 +184,7 @@ ev("locked-out-of-car-what-to-do",
        "Give us your exact location (a pin or nearby cross-street helps), the vehicle year/make/model, and whether the keys are visible inside. We'll quote a firm price and a real ETA before we hang up.",
        "A professional open is non-destructive — we use picks, decoders and air wedges that leave your door, paint and lock untouched. Most car lockouts start at $65 and take minutes once we arrive."])],
    "/#services", "our automotive locksmith services",
-   "Locked out right now? Call (682) 666-2966 — Dfwkeymaster reaches most of DFW in 20–45 minutes, 24/7.",
+   "Locked out right now? Call (682) 666-2966 — DFWKeyMaster reaches most of DFW in 20–45 minutes, 24/7.",
    ["locked-out-of-house-step-by-step", "what-to-have-ready-emergency-locksmith", "dfw-lockout-prevention-tips"])
 
 ev("locked-out-of-house-step-by-step",
@@ -202,7 +202,7 @@ ev("locked-out-of-house-step-by-step",
        "Resist the urge to drill the lock or pry the door — you'll turn a $75 lockout into a $300 door and lock replacement. A professional locksmith opens most residential doors non-destructively in minutes using picks and decoders.",
        "When you call, tell us the lock type if you know it (deadbolt, knob, smart lock) and whether the door is the only way in. House lockouts start at $75, and we quote the full price before we start."])],
    "/#services", "our residential locksmith services",
-   "Locked out of your house? Dfwkeymaster opens doors damage-free across DFW, 24/7. Call (682) 666-2966.",
+   "Locked out of your house? DFWKeyMaster opens doors damage-free across DFW, 24/7. Call (682) 666-2966.",
    ["locked-out-of-car-what-to-do", "new-home-rekey-checklist", "broken-key-stuck-in-lock"])
 
 ev("new-home-rekey-checklist",
@@ -220,7 +220,7 @@ ev("new-home-rekey-checklist",
        "The best time to rekey is before you're fully moved in, ideally on closing day. It's fast (most homes take under an hour), and you start homeownership knowing exactly who holds a key: you and no one else.",
        "Schedule us for the afternoon of your closing and we'll have every lock in the house rekeyed before your first night."])],
    "/#services", "our residential locksmith services",
-   "Just bought a home in DFW? Dfwkeymaster rekeys whole houses same-day, starting at $25 per lock. Call (682) 666-2966.",
+   "Just bought a home in DFW? DFWKeyMaster rekeys whole houses same-day, starting at $25 per lock. Call (682) 666-2966.",
    ["rekey-vs-replace-locks", "smart-lock-buying-installation-guide-2026", "locked-out-of-house-step-by-step"])
 
 ev("signs-ignition-cylinder-failing",
@@ -238,7 +238,7 @@ ev("signs-ignition-cylinder-failing",
        "Usually, yes. We diagnose on-site whether it's the key or the cylinder, then repair or replace the cylinder and rekey it to match your existing key where possible — no tow, no dealer markup.",
        "If you're noticing the early signs, don't wait for a total failure. A cylinder that sticks today strands you next month."])],
    "/#services", "our automotive locksmith services",
-   "Key stuck or won't turn? Dfwkeymaster diagnoses ignition problems on-site across DFW. Call (682) 666-2966.",
+   "Key stuck or won't turn? DFWKeyMaster diagnoses ignition problems on-site across DFW. Call (682) 666-2966.",
    ["broken-key-stuck-in-lock", "car-key-replacement-cost-guide-2026", "transponder-vs-smart-vs-traditional-keys"])
 
 ev("broken-key-stuck-in-lock",
@@ -256,7 +256,7 @@ ev("broken-key-stuck-in-lock",
        "We use spiral and hooked extractors designed to grip the broken blade and slide it out without harming the cylinder — usually in minutes. In most cases the lock is completely unharmed and we simply cut you a fresh key on the spot.",
        "Replacement is only needed if the lock was already worn or the key broke because the cylinder was failing — and we'll tell you honestly which situation you're in before doing anything more."])],
    "/#services", "our residential locksmith services",
-   "Broken key in a lock? Dfwkeymaster extracts keys and cuts replacements on-site across DFW. Call (682) 666-2966.",
+   "Broken key in a lock? DFWKeyMaster extracts keys and cuts replacements on-site across DFW. Call (682) 666-2966.",
    ["signs-ignition-cylinder-failing", "locked-out-of-house-step-by-step", "rekey-vs-replace-locks"])
 
 ev("master-key-systems-small-business-guide",
@@ -274,7 +274,7 @@ ev("master-key-systems-small-business-guide",
        "A basic small-office system starts around $25–$45 per cylinder plus a setup fee, scaling with the number of locks and hierarchy levels. Because it re-pins existing hardware, it's far cheaper than replacing locks — and easily expanded as you grow.",
        "We design and quote the whole system upfront, so you know the exact cost before a single lock is touched."])],
    "/#services", "our commercial locksmith services",
-   "Ready to simplify your business keys? Dfwkeymaster designs master key systems across DFW. Call (682) 666-2966.",
+   "Ready to simplify your business keys? DFWKeyMaster designs master key systems across DFW. Call (682) 666-2966.",
    ["commercial-locksmith-access-control-master-keys", "rekey-vs-replace-locks", "choose-licensed-insured-locksmith-texas"])
 
 ev("choose-licensed-insured-locksmith-texas",
@@ -287,12 +287,12 @@ ev("choose-licensed-insured-locksmith-texas",
        "A real locksmith will never hesitate to show credentials. Reluctance or an excuse is your cue to call someone else."]),
     ("Confirm insurance and a real local presence", [
        "Insurance protects you if something goes wrong on the job. Beyond that, look for signs of a genuine local business: a branded vehicle, a consistent phone number, real reviews, and a verifiable address — not just a generic call center that subcontracts to whoever's nearby.",
-       "Scam operations often use national numbers and unmarked cars. A local mobile locksmith like Dfwkeymaster arrives in a branded vehicle with uniformed, background-checked technicians."]),
+       "Scam operations often use national numbers and unmarked cars. A local mobile locksmith like DFWKeyMaster arrives in a branded vehicle with uniformed, background-checked technicians."]),
     ("Get a written quote before work begins", [
        "A legitimate locksmith quotes the full price — service call, labor and parts — before starting and stands behind it. Be wary of vague pricing, a lowball '$19 service call' that balloons on-site, or pressure to pay cash with no receipt.",
        "Always ask for an itemized receipt. It's your record, and any reputable company provides one without being asked twice."])],
-   "/#about", "more about Dfwkeymaster",
-   "Dfwkeymaster is Texas DPS licensed, background-checked and fully insured — and we'll happily show credentials. Call (682) 666-2966.",
+   "/#about", "more about DFWKeyMaster",
+   "DFWKeyMaster is Texas DPS licensed, background-checked and fully insured — and we'll happily show credentials. Call (682) 666-2966.",
    ["locksmith-scam-red-flags", "reviews", "commercial-locksmith-access-control-master-keys"])
 
 ev("locksmith-scam-red-flags",
@@ -308,9 +308,9 @@ ev("locksmith-scam-red-flags",
        "Red flag nine: a generic national call center that can't tell you the local company's name or address. They subcontract to unvetted operators and wash their hands of the result."]),
     ("How to protect yourself", [
        "Save a verified local locksmith's number before you need one. When you call, demand a firm total price upfront, ask for the DPS license number, and confirm the technician arrives in a marked vehicle. If anything feels off on arrival, you can decline service.",
-       "Dfwkeymaster quotes the full price before we start, arrives branded and licensed, and provides an itemized receipt — the exact opposite of the scam playbook."])],
+       "DFWKeyMaster quotes the full price before we start, arrives branded and licensed, and provides an itemized receipt — the exact opposite of the scam playbook."])],
    "/#reviews", "what DFW customers say about us",
-   "Want a locksmith you can trust before an emergency? Save Dfwkeymaster's number now: (682) 666-2966.",
+   "Want a locksmith you can trust before an emergency? Save DFWKeyMaster's number now: (682) 666-2966.",
    ["choose-licensed-insured-locksmith-texas", "locked-out-of-car-what-to-do", "about"])
 
 ev("smart-lock-buying-installation-guide-2026",
@@ -328,7 +328,7 @@ ev("smart-lock-buying-installation-guide-2026",
        "Smart locks are unforgiving of a misaligned door. If the bolt doesn't throw perfectly, the motor strains, batteries drain, and the auto-lock fails — the exact reliability you paid for. A professional ensures the strike is aligned, the bolt throws cleanly, and the lock is paired and configured correctly.",
        "Installation starts at $120 plus the lock. We fit it, connect it to your Wi-Fi or hub, pair your phones, and walk you through codes and the app before we leave."])],
    "/#services", "our residential locksmith services",
-   "Want a smart lock installed right the first time? Dfwkeymaster installs Schlage, Yale, August and more across DFW. Call (682) 666-2966.",
+   "Want a smart lock installed right the first time? DFWKeyMaster installs Schlage, Yale, August and more across DFW. Call (682) 666-2966.",
    ["are-smart-locks-worth-it", "new-home-rekey-checklist", "rekey-vs-replace-locks"])
 
 ev("are-smart-locks-worth-it",
@@ -346,7 +346,7 @@ ev("are-smart-locks-worth-it",
        "Most smart locks fit standard deadbolt prep (a 2⅜-inch or 2¾-inch backset on a 1⅜–2-inch thick door), but older doors, mortise locks and some multipoint systems need adapters or a different model. Doors that sag or stick are the biggest issue — the bolt must align perfectly for the motor to work reliably.",
        "The surest path: have us assess your door first. We'll tell you whether your existing prep is compatible and which models will work reliably, before you spend a dollar on hardware."])],
    "/#services", "our residential locksmith services",
-   "Wondering if a smart lock fits your door? Dfwkeymaster will assess compatibility and install it right. Call (682) 666-2966.",
+   "Wondering if a smart lock fits your door? DFWKeyMaster will assess compatibility and install it right. Call (682) 666-2966.",
    ["smart-lock-buying-installation-guide-2026", "new-home-rekey-checklist", "choose-licensed-insured-locksmith-texas"])
 
 ev("rekey-vs-replace-locks",
@@ -364,7 +364,7 @@ ev("rekey-vs-replace-locks",
        "If someone forced entry, replace the damaged lock — forced entry often bends or cracks internal components that rekeying won't fix. If the intruder used a key (a stolen or copied one), a rekey that invalidates the old key may be sufficient, though many homeowners choose to upgrade at the same time for peace of mind.",
        "Not sure which you need? We'll inspect the locks and give you an honest recommendation — rekey where it's enough, replace only where it's genuinely warranted."])],
    "/#services", "our residential locksmith services",
-   "Move or break-in? Dfwkeymaster rekeys and replaces locks across DFW, starting at $25 per cylinder. Call (682) 666-2966.",
+   "Move or break-in? DFWKeyMaster rekeys and replaces locks across DFW, starting at $25 per cylinder. Call (682) 666-2966.",
    ["new-home-rekey-checklist", "cost-to-change-locks-texas", "broken-key-stuck-in-lock"])
 
 ev("cost-to-change-locks-texas",
@@ -382,7 +382,7 @@ ev("cost-to-change-locks-texas",
        "Smart lock installation starts around $120 per lock plus the hardware itself ($100–$300 depending on the model). High-security mechanical locks like Medeco or Mul-T-Lock cost more but offer pick and bump resistance that standard locks can't match.",
        "Whatever route you choose, always get a full quote upfront — service call, labor and parts as one number. Any locksmith who won't quote the complete price before starting is one to avoid."])],
    "/#pricing", "our transparent pricing",
-   "Want an exact quote for your home? Dfwkeymaster quotes lock changes across DFW upfront and in full. Call (682) 666-2966.",
+   "Want an exact quote for your home? DFWKeyMaster quotes lock changes across DFW upfront and in full. Call (682) 666-2966.",
    ["rekey-vs-replace-locks", "new-home-rekey-checklist", "smart-lock-buying-installation-guide-2026"])
 
 ev("commercial-locksmith-access-control-master-keys",
@@ -400,7 +400,7 @@ ev("commercial-locksmith-access-control-master-keys",
        "Commercial doors often need Grade 1 hardware, panic bars for fire-code egress, door closers and restricted keyways that prevent unauthorized copying. We install and service all of it, and we make sure egress hardware meets Texas fire code.",
        "Whether it's a single storefront or a multi-suite office, we assess the whole property and recommend the right layered solution — then quote it completely before any work begins."])],
    "/#services", "our commercial locksmith services",
-   "Securing an office or storefront? Dfwkeymaster designs master key and access control systems across DFW. Call (682) 666-2966.",
+   "Securing an office or storefront? DFWKeyMaster designs master key and access control systems across DFW. Call (682) 666-2966.",
    ["master-key-systems-small-business-guide", "safe-opening-services-lost-combination", "choose-licensed-insured-locksmith-texas"])
 
 ev("safe-opening-services-lost-combination",
@@ -418,7 +418,7 @@ ev("safe-opening-services-lost-combination",
        "Prying a safe door, hammering the dial or drilling randomly almost always destroys the safe and can trigger relockers that make professional opening far harder and more expensive. If the contents matter, don't force it.",
        "Whether it's a home gun safe, an office document safe or a commercial depository, we open it professionally and discreetly — and we can service or upgrade the lock while we're there."])],
    "/#services", "our commercial locksmith services",
-   "Locked out of a safe? Dfwkeymaster opens safes non-destructively across DFW. Call (682) 666-2966.",
+   "Locked out of a safe? DFWKeyMaster opens safes non-destructively across DFW. Call (682) 666-2966.",
    ["commercial-locksmith-access-control-master-keys", "master-key-systems-small-business-guide", "about"])
 
 ev("motorcycle-rv-key-replacement",
@@ -436,7 +436,7 @@ ev("motorcycle-rv-key-replacement",
        "A motorcycle or RV with no key can't easily be towed to a shop — and dealerships for either are often far away and slow. Mobile service is genuinely the practical option: we come to wherever the bike or rig is parked and cut the key there.",
        "Have your VIN, year/make/model and proof of ownership ready, and we'll bring the right blanks and equipment for your specific vehicle."])],
    "/#services", "our automotive locksmith services",
-   "Need a motorcycle or RV key? Dfwkeymaster carries the specialized blanks and equipment — and we come to you. Call (682) 666-2966.",
+   "Need a motorcycle or RV key? DFWKeyMaster carries the specialized blanks and equipment — and we come to you. Call (682) 666-2966.",
    ["car-key-replacement-cost-guide-2026", "trunk-lockout-dont-force-it", "transponder-vs-smart-vs-traditional-keys"])
 
 ev("trunk-lockout-dont-force-it",
@@ -454,7 +454,7 @@ ev("trunk-lockout-dont-force-it",
        "If the car battery is dead, the electronic trunk release won't work even with the fob — a common gotcha. In those cases we address the power issue first, then open the trunk.",
        "Before you're in this spot, know where your physical key blade is (most fobs hide one) and whether your car has a manual trunk release. And if it happens anyway, call us rather than reaching for a pry bar."])],
    "/#services", "our automotive locksmith services",
-   "Keys in the trunk? Dfwkeymaster opens trunks damage-free across DFW, 24/7. Call (682) 666-2966.",
+   "Keys in the trunk? DFWKeyMaster opens trunks damage-free across DFW, 24/7. Call (682) 666-2966.",
    ["locked-out-of-car-what-to-do", "motorcycle-rv-key-replacement", "push-to-start-key-fob-guide"])
 
 ev("dfw-lockout-prevention-tips",
@@ -470,9 +470,9 @@ ev("dfw-lockout-prevention-tips",
        "If your battery is more than three years old, test it before a freeze — a dead battery in a DFW ice event is a miserable lockout scenario."]),
     ("Year-round habits that prevent most lockouts", [
        "Make a spare key and keep it somewhere smart — with a trusted person, not under the car. Adopt a 'keys in hand' rule every time you close a door. And save a reliable mobile locksmith's number in your phone before you need it.",
-       "Despite every precaution, lockouts still happen — that's why we exist. Save (682) 666-2966 now, and a Dfwkeymaster van can be to you in 20–45 minutes, anywhere in the metroplex, in any weather."])],
+       "Despite every precaution, lockouts still happen — that's why we exist. Save (682) 666-2966 now, and a DFWKeyMaster van can be to you in 20–45 minutes, anywhere in the metroplex, in any weather."])],
    "/#areas", "all the DFW areas we serve",
-   "Locked out in DFW heat or a freeze? Dfwkeymaster reaches you fast in any weather. Call (682) 666-2966.",
+   "Locked out in DFW heat or a freeze? DFWKeyMaster reaches you fast in any weather. Call (682) 666-2966.",
    ["locked-out-of-car-what-to-do", "what-to-have-ready-emergency-locksmith", "push-to-start-key-fob-guide"])
 
 ev("what-to-have-ready-emergency-locksmith",
@@ -489,8 +489,8 @@ ev("what-to-have-ready-emergency-locksmith",
     ("Proof of ownership and a callback number", [
        "For your protection, legitimate locksmiths verify ownership before opening anything. Have a registration, title, or an ID matching the address ready. For a rental, be prepared to contact the landlord.",
        "And give a reliable callback number that will stay answered. With location, vehicle details and proof of ownership in hand, we can give you a firm quote and a real ETA on the spot."])],
-   "/#contact", "contact Dfwkeymaster",
-   "Save this before you need it: Dfwkeymaster emergency locksmith, (682) 666-2966 — 24/7 across DFW.",
+   "/#contact", "contact DFWKeyMaster",
+   "Save this before you need it: DFWKeyMaster emergency locksmith, (682) 666-2966 — 24/7 across DFW.",
    ["locked-out-of-car-what-to-do", "dfw-lockout-prevention-tips", "locksmith-scam-red-flags"])
 
 ev("push-to-start-key-fob-guide",
@@ -508,7 +508,7 @@ ev("push-to-start-key-fob-guide",
        "Smart fob replacement runs $250–$500 depending on the make, cut and programmed. If you've lost all fobs it's more involved, but we can usually originate and program a new one on-site — no dealer tow.",
        "Because a single lost fob leaves you stranded, a spare is the smartest money you can spend. Having one working fob makes adding a second dramatically cheaper and faster — do it before you're down to your last one."])],
    "/#services", "our automotive locksmith services",
-   "Need a push-to-start fob programmed or replaced? Dfwkeymaster does it on-site across DFW. Call (682) 666-2966.",
+   "Need a push-to-start fob programmed or replaced? DFWKeyMaster does it on-site across DFW. Call (682) 666-2966.",
    ["key-fob-programming-explained", "transponder-vs-smart-vs-traditional-keys", "car-key-replacement-cost-guide-2026"])
 
 print("total posts:", len(entries))

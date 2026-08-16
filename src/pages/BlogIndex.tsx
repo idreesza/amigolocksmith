@@ -9,12 +9,12 @@ import StickyCall from "@/sections/StickyCall";
 import { BLOG_POSTS } from "@/data/blog";
 import { SITE, asset } from "@/lib/site";
 
-const HOME_TITLE = "24/7 Locksmith Grand Prairie TX | Dfwkeymaster — Mobile Locksmith DFW | (682) 666-2966";
-const HOME_DESC = "Dfwkeymaster is a 24/7 mobile locksmith in Grand Prairie, TX serving the entire Dallas–Fort Worth metroplex.";
+const HOME_TITLE = "24/7 Locksmith Grand Prairie TX | DFWKeyMaster — Mobile Locksmith DFW | (682) 666-2966";
+const HOME_DESC = "DFWKeyMaster is a 24/7 mobile locksmith in Grand Prairie, TX serving the entire Dallas–Fort Worth metroplex.";
 
 function BlogIndexSeo() {
   useEffect(() => {
-    const title = "Locksmith Blog — DFW Tips, Costs & Guides | Dfwkeymaster";
+    const title = "Locksmith Blog — DFW Tips, Costs & Guides | DFWKeyMaster";
     const desc = "Expert locksmith guides for DFW: car key costs, lockout help, rekey checklists, smart locks and local locksmith advice for all 27 DFW cities we serve.";
     document.title = title;
     const setMeta = (attr: "name" | "property", key: string, content: string) => {
@@ -47,7 +47,7 @@ export default function BlogIndex() {
       <Navbar />
       <main className="mx-auto max-w-7xl px-4 pb-24 pt-32 sm:px-6 lg:px-8">
         <header className="max-w-3xl">
-          <p className="text-sm font-bold uppercase tracking-widest text-emerald-400">The Dfwkeymaster Blog</p>
+          <p className="text-sm font-bold uppercase tracking-widest text-emerald-400">The DFWKeyMaster Blog</p>
           <h1 className="mt-3 font-display text-4xl font-extrabold text-white sm:text-5xl">
             Locksmith Guides for <span className="text-gradient-emerald">DFW</span>
           </h1>

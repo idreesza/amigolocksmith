@@ -5,6 +5,7 @@ import { Phone } from "lucide-react"
 import { X } from "lucide-react"
 import { KeyRound } from "lucide-react";
 import { NAV_LINKS, SITE } from "@/lib/site";
+import { Brand } from "@/components/Brand";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -32,7 +33,7 @@ export default function Navbar() {
             <KeyRound className="h-5 w-5" strokeWidth={2.5} />
           </span>
           <span className="leading-tight">
-            <span className="block font-display text-lg font-bold text-white">Dfwkeymaster</span>
+            <Brand className="block font-display text-lg font-bold" />
             <span className="block text-[11px] font-medium uppercase tracking-widest text-emerald-400">
               24/7 Mobile Locksmith
             </span>

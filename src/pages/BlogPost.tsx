@@ -11,8 +11,8 @@ import StickyCall from "@/sections/StickyCall";
 import { getPost } from "@/data/blog";
 import { SITE, asset } from "@/lib/site";
 
-const HOME_TITLE = "24/7 Locksmith Grand Prairie TX | Dfwkeymaster — Mobile Locksmith DFW | (682) 666-2966";
-const HOME_DESC = "Dfwkeymaster is a 24/7 mobile locksmith in Grand Prairie, TX serving the entire Dallas–Fort Worth metroplex.";
+const HOME_TITLE = "24/7 Locksmith Grand Prairie TX | DFWKeyMaster — Mobile Locksmith DFW | (682) 666-2966";
+const HOME_DESC = "DFWKeyMaster is a 24/7 mobile locksmith in Grand Prairie, TX serving the entire Dallas–Fort Worth metroplex.";
 
 function PostSeo({ slug }: { slug: string }) {
   useEffect(() => {

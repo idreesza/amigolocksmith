@@ -9,13 +9,13 @@ export const asset = (path: string) =>
   `${import.meta.env.BASE_URL.replace(/\/$/, "")}${path}`;
 
 export const SITE = {
-  name: "Dfwkeymaster",
+  name: "DFWKeyMaster",
   tagline: "The Locksmith That Comes to You — 24/7 Across DFW",
   phone: "(682) 666-2966",
   phoneHref: "tel:+16826662966",
   phoneIntl: "+1-682-666-2966",
-  email: "info@amigolocksmith.com",
-  emailHref: "mailto:info@amigolocksmith.com",
+  email: "contact@dfwkeymaster.com",
+  emailHref: "mailto:contact@dfwkeymaster.com",
   city: "Grand Prairie",
   state: "TX",
   stateFull: "Texas",
@@ -120,7 +120,7 @@ export const REVIEWS = [
     name: "Derek T.",
     city: "Arlington, TX",
     service: "Key fob programming",
-    text: "The dealer quoted me $480 and a two-day wait for a new fob. Dfwkeymaster came to my office, cut and programmed it in the parking lot for nearly half the price. Unreal service.",
+    text: "The dealer quoted me $480 and a two-day wait for a new fob. DFWKeyMaster came to my office, cut and programmed it in the parking lot for nearly half the price. Unreal service.",
     rating: 5,
   },
   {
@@ -156,7 +156,7 @@ export const REVIEWS = [
 export const FAQS = [
   {
     q: "How fast can a locksmith get to me in Grand Prairie or DFW?",
-    a: "Because Dfwkeymaster is a fully mobile locksmith based in Grand Prairie, our average arrival time is 15–25 minutes within Grand Prairie and 20–45 minutes across the rest of the Dallas–Fort Worth metroplex, including Arlington, Irving, Dallas, Fort Worth, Mansfield, Duncanville, Cedar Hill, Plano and Frisco. When you call (682) 666-2966, we give you a real-time ETA before you hang up.",
+    a: "Because DFWKeyMaster is a fully mobile locksmith based in Grand Prairie, our average arrival time is 15–25 minutes within Grand Prairie and 20–45 minutes across the rest of the Dallas–Fort Worth metroplex, including Arlington, Irving, Dallas, Fort Worth, Mansfield, Duncanville, Cedar Hill, Plano and Frisco. When you call (682) 666-2966, we give you a real-time ETA before you hang up.",
   },
   {
     q: "How much does a locksmith cost in Grand Prairie, TX?",
@@ -168,7 +168,7 @@ export const FAQS = [
   },
   {
     q: "Are you available 24 hours a day, even on weekends and holidays?",
-    a: "Yes — Dfwkeymaster operates 24/7/365, including nights, weekends and holidays. Lockouts don't keep business hours, and neither do we. Emergency calls are answered by a real dispatcher, not a voicemail.",
+    a: "Yes — DFWKeyMaster operates 24/7/365, including nights, weekends and holidays. Lockouts don't keep business hours, and neither do we. Emergency calls are answered by a real dispatcher, not a voicemail.",
   },
   {
     q: "Will opening my car or house damage the lock?",
@@ -188,7 +188,7 @@ export const FAQS = [
   },
   {
     q: "Are your locksmiths licensed and insured?",
-    a: "Yes. Dfwkeymaster technicians are licensed under the Texas Department of Public Safety Private Security Bureau, background-checked, uniformed, and fully insured. Ask for the license number any time — we're proud to show it.",
+    a: "Yes. DFWKeyMaster technicians are licensed under the Texas Department of Public Safety Private Security Bureau, background-checked, uniformed, and fully insured. Ask for the license number any time — we're proud to show it.",
   },
   {
     q: "Do you charge extra for nights, weekends or emergencies?",

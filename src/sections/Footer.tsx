@@ -3,6 +3,7 @@ import { KeyRound } from "lucide-react"
 import { Mail } from "lucide-react"
 import { Phone } from "lucide-react";
 import { CITIES, NAV_LINKS, SERVICES, SITE } from "@/lib/site";
+import { Brand } from "@/components/Brand";
 
 export default function Footer() {
   return (
@@ -13,7 +14,7 @@ export default function Footer() {
             <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-400 text-slate-900">
               <KeyRound className="h-5 w-5" strokeWidth={2.5} />
             </span>
-            <span className="font-display text-lg font-bold text-white">Dfwkeymaster</span>
+            <Brand className="font-display text-lg font-bold" />
           </Link>
           <p className="mt-5 text-sm leading-relaxed text-slate-400">
             {SITE.name} — 24/7 mobile automotive, residential and commercial locksmith based in{" "}

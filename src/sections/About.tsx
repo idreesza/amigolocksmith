@@ -21,7 +21,7 @@ export default function About() {
               <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-tr from-emerald-400/20 to-transparent blur-2xl" aria-hidden />
               <img
                 src={asset("/images/about-technician.jpg")}
-                alt="Dfwkeymaster locksmith technician in front of a mobile service van in Grand Prairie, TX"
+                alt="DFWKeyMaster locksmith technician in front of a mobile service van in Grand Prairie, TX"
                 loading="lazy"
                 className="relative w-full rounded-[2rem] border border-slate-700/60 object-cover shadow-2xl"
               />
@@ -49,7 +49,7 @@ export default function About() {
             </Reveal>
             <Reveal delay={0.1}>
               <p className="mt-6 leading-relaxed text-slate-400">
-                Dfwkeymaster started with one van and a simple frustration: too many people in
+                DFWKeyMaster started with one van and a simple frustration: too many people in
                 DFW were being overcharged, kept waiting for hours, or worse — scammed — at the
                 exact moment they were most vulnerable. So we built the locksmith company we
                 wished existed.
